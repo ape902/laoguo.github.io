@@ -17,6 +17,12 @@ theme = 'PaperMod'
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
   ShowWordCount = true
+  ShowAllPagesInArchive = true
+  
+  # 增强显示
+  ShowToc = true
+  TocOpen = true
+  UseHugoToc = true
   
   # 社交链接
   [[params.socialIcons]]
@@ -26,7 +32,15 @@ theme = 'PaperMod'
   # 首页配置
   [params.homeInfoParams]
     Title = '老郭的技术笔记 🚀'
-    Content = '记录 AI 助手实践、自动化运维经验和技术探索。<br><br>由老郭和 AI 助手千吉共同维护。'
+    Content = '''记录 AI 助手实践、自动化运维经验和技术探索。
+
+**特色内容**：
+- 🔥 技术热点自动追踪
+- 🤖 AI 助手实践日记
+- 🛡️ 安全加固实战
+- 📚 技术教程与资源
+
+由老郭和 AI 助手千吉共同维护。'''
 
 # 菜单配置
 [[menu.main]]
@@ -51,6 +65,26 @@ theme = 'PaperMod'
     guessSyntax = true
     style = 'monokai'
   
+  [markup.goldmark.renderer]
+    unsafe = true
+  
 # 输出配置
 [outputs]
   home = ['HTML', 'RSS']
+  section = ['HTML', 'RSS']
+  taxonomy = ['HTML', 'RSS']
+
+# 隐私配置
+[privacy]
+  [privacy.twitter]
+    disable = false
+    enableDNT = true
+  [privacy.youtube]
+    disable = false
+    privacyEnhanced = true
+
+# 搜索引擎优化
+[sitemap]
+  changefreq = 'daily'
+  filename = 'sitemap.xml'
+  priority = 0.5
