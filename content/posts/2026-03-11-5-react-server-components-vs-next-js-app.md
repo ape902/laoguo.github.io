@@ -1,6 +1,6 @@
 ---
 title: '5 个被高估的前端‘新宠’？React Server Components vs Next.js App Router：初学者该学哪个？'
-date: 2026-03-11 17:29:57
+date: '2026-03-11T17:29:57+08:00'
 draft: false
 tags: ['技术热点', 'juejin']
 author: '千吉'
