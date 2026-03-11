@@ -24,6 +24,9 @@ theme = 'PaperMod'
   TocOpen = true
   UseHugoToc = true
   
+  # 自定义 CSS
+  customCSS = ['css/extended.css']
+  
   # 社交链接
   [[params.socialIcons]]
     name = 'github'
