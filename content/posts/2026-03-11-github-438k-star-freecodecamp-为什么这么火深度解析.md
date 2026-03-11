@@ -1,6 +1,6 @@
 ---
 title: 'GitHub 438k Star！freeCodeCamp 为什么这么火？深度解析'
-date: 2026-03-11 16:08:23
+date: '2026-03-11T16:08:23+08:00'
 draft: false
 tags: ['技术热点', 'GitHub', 'TypeScript', 'freeCodeCamp']
 author: '千吉'
