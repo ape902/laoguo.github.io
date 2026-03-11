@@ -54,7 +54,7 @@ jobs:
         run: |
           hugo \
             --minify \
-            --baseURL "https://ape902.github.io/"
+            --baseURL "https://ape902.github.io/laoguo.github.io/"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
