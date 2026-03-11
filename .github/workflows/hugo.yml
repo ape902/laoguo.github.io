@@ -43,6 +43,7 @@ jobs:
 
       - name: Clone PaperMod theme
         run: |
+          rm -rf themes/PaperMod
           git clone --depth 1 https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod || \
           git clone --depth 1 https://gitee.com/mirrors/hugo-PaperMod.git themes/PaperMod
 
