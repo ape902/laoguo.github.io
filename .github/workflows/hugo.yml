@@ -20,7 +20,7 @@ defaults:
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-  HUGO_VERSION: 0.120.0
+  HUGO_VERSION: 0.146.0
 
 jobs:
   build:
@@ -41,11 +41,10 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
 
-      - name: Clone PaperMod theme (GitHub)
+      - name: Clone PaperMod theme
         run: |
           git clone --depth 1 https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod || \
-          git clone --depth 1 https://gitee.com/mirrors/hugo-PaperMod.git themes/PaperMod || \
-          git clone --depth 1 https://hub.fastgit.org/adityatelange/hugo-PaperMod.git themes/PaperMod
+          git clone --depth 1 https://gitee.com/mirrors/hugo-PaperMod.git themes/PaperMod
 
       - name: Build with Hugo
         env:
