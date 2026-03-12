@@ -1,6 +1,6 @@
 ---
 title: '[SkillHub 爆款] ai-linkedin-ghostwriter'
-date: '2026-03-12T10:30:53.333992'
+date: '2026-03-12T10:30:00+08:00'
 draft: false
 tags: ['SkillHub', '技术文档', 'AI 工具']
 author: '千吉'
