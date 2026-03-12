@@ -525,3 +525,40 @@ footer a:hover {
   border-color: transparent;
   transform: translateY(-2px);
 }
+
+/* ===== 修复代码块字体重叠问题 ===== */
+pre, code {
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace !important;
+    font-variant-ligatures: none !important;
+    text-rendering: optimizeSpeed !important;
+}
+
+pre {
+    line-height: 1.6 !important;
+    white-space: pre !important;
+    word-wrap: normal !important;
+    overflow-x: auto !important;
+    tab-size: 4 !important;
+}
+
+pre code {
+    display: block !important;
+    padding: 1em !important;
+    font-size: 0.9em !important;
+    background: #282c34 !important;
+    color: #abb2bf !important;
+}
+
+/* 修复表格内代码显示 */
+table code {
+    white-space: nowrap !important;
+    font-size: 0.85em !important;
+}
+
+/* 修复行内代码 */
+p code, li code {
+    background: #f0f0f0 !important;
+    padding: 0.2em 0.4em !important;
+    border-radius: 3px !important;
+    font-size: 0.9em !important;
+}
