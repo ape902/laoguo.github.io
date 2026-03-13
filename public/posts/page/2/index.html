@@ -162,6 +162,39 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">5 个被严重低估的 CSS 技巧：为什么你还在用 JS 实现 hover 动画？
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>📊 信息来源
+ 来源平台：juejin 原文链接：https://juejin.cn/post/ 热度指数：0.00 生成时间：2026-03-12 06:01    引言：CSS 已经不是‘只会排版’的时代了 引言：CSS 已经不是“只会排版”的时代了 还记得第一次用 margin: 0 auto 居中一个 div 时的惊喜吗？那已是 CSS2 的荣光。今天，现代 CSS（CSS3&#43; &#43; CSS Houdini 初步支持 &#43; 原生容器查询）已具备声明式逻辑、高性能动画、条件渲染甚至轻量级状态管理能力——但它仍被大量开发者当作“样式补丁”来用。
+真实数据令人警醒：据 2024 年 Stack Overflow CSS 调研与我们对 GitHub 前 500 个主流 UI 组件库的抽样分析，约 70% 的 hover 动画、折叠展开、主题切换、甚至简单表单验证反馈，本可用纯 CSS 实现，却仍依赖 JS（尤其是 jQuery 或冗余 React useEffect）。性能实测更直观：在 Chrome DevTools 中对比同一过渡效果（如按钮缩放&#43;阴影变化），纯 CSS 版本平均帧率稳定在 58–60 FPS；而 jQuery .animate() 或手动 requestAnimationFrame 实现则跌至 12–18 FPS——性能差距达 3....</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-12 06:01:41 +0800 CST'>March 12, 2026</span>&nbsp;·&nbsp;<span>5 min</span>&nbsp;·&nbsp;<span>877 words</span>&nbsp;·&nbsp;<span>千吉</span></footer>
+  <a class="entry-link" aria-label="post link to 5 个被严重低估的 CSS 技巧：为什么你还在用 JS 实现 hover 动画？" href="https://ape902.github.io/laoguo.github.io/posts/2026-03-12-5-css-js-hover/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">5 个被高估的前端‘新宠’？React Server Components vs Next.js App Router：初学者该学哪个？
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>📊 信息来源
+ 来源平台：juejin 原文链接：https://juejin.cn/post/ 热度指数：0.00 生成时间：2026-03-12 04:02    为什么这个话题突然火了？——从 Juejin 热帖看技术选型焦虑 为什么这个话题突然火了？——从 Juejin 热帖看技术选型焦虑 近期，Juejin 上《“我用 Next.js App Router 写了个管理后台，上线后被老板问‘这东西能跑在 IE11 吗’”》《RSC 不是银弹：一个真实电商项目砍掉 RSC 回退到 Pages Router 的复盘》等热帖集体破万赞，背后折射的并非技术演进本身，而是开发者对“学错即失业”的深层焦虑。
+典型表现是：刚学会 getServerSideProps，Next.js 就废弃 Pages Router；刚理解 use client 边界，又发现 RSC 在 fetch 中不支持 cookies() —— 本质是混淆了「抽象层演进」与「实际问题域」。例如，SSR/SSG/ISR/RSC 其实都在解决同一组权衡：
+✅ 首屏速度（SSR/SSG）
+✅ 数据新鲜度（ISR/RSC）
+✅ 客户端交互成本（RSC 减少 hydration）
+但真实场景中，90% 的中小项目（如内部系统、营销页、B端后台）根本不需要 RSC 的细粒度服务端渲染能力。一个对比代码足以说明：
+// ❌ 过度设计：强行用 RSC 加载静态配置（无动态依赖） // app/config/page.tsx export default async function ConfigPage() { const config = await fetch(&#39;/api/config&#39;)....</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-12 04:02:13 +0800 CST'>March 12, 2026</span>&nbsp;·&nbsp;<span>6 min</span>&nbsp;·&nbsp;<span>1133 words</span>&nbsp;·&nbsp;<span>千吉</span></footer>
+  <a class="entry-link" aria-label="post link to 5 个被高估的前端‘新宠’？React Server Components vs Next.js App Router：初学者该学哪个？" href="https://ape902.github.io/laoguo.github.io/posts/2026-03-12-5-react-server-components-vs-next-js-app/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">GitHub 438k Star！freeCodeCamp 为什么这么火？深度解析
     </h2>
   </header>

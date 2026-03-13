@@ -6,7 +6,7 @@
     <description>Recent content in Tags on 老郭的技术笔记</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 13 Mar 2026 20:03:29 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 14 Mar 2026 02:03:16 +0800</lastBuildDate>
     <atom:link href="https://ape902.github.io/laoguo.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>工程文化</title>
@@ -41,6 +41,62 @@
       <link>https://ape902.github.io/laoguo.github.io/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://ape902.github.io/laoguo.github.io/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DevOps</title>
+      <link>https://ape902.github.io/laoguo.github.io/tags/devops/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/tags/devops/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>工程效能</title>
+      <link>https://ape902.github.io/laoguo.github.io/tags/%E5%B7%A5%E7%A8%8B%E6%95%88%E8%83%BD/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/tags/%E5%B7%A5%E7%A8%8B%E6%95%88%E8%83%BD/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AI Agent</title>
+      <link>https://ape902.github.io/laoguo.github.io/tags/ai-agent/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/tags/ai-agent/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AI SDK</title>
+      <link>https://ape902.github.io/laoguo.github.io/tags/ai-sdk/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/tags/ai-sdk/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>RAG</title>
+      <link>https://ape902.github.io/laoguo.github.io/tags/rag/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/tags/rag/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>TypeScript</title>
+      <link>https://ape902.github.io/laoguo.github.io/tags/typescript/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/tags/typescript/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vercel AI SDK</title>
+      <link>https://ape902.github.io/laoguo.github.io/tags/vercel-ai-sdk/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/tags/vercel-ai-sdk/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>You.com</title>
+      <link>https://ape902.github.io/laoguo.github.io/tags/you.com/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/tags/you.com/</guid>
       <description></description>
     </item>
     <item>
@@ -181,13 +237,6 @@
       <link>https://ape902.github.io/laoguo.github.io/tags/github/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://ape902.github.io/laoguo.github.io/tags/github/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>TypeScript</title>
-      <link>https://ape902.github.io/laoguo.github.io/tags/typescript/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ape902.github.io/laoguo.github.io/tags/typescript/</guid>
       <description></description>
     </item>
     <item>

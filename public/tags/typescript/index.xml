@@ -6,8 +6,15 @@
     <description>Recent content in TypeScript on 老郭的技术笔记</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 11 Mar 2026 16:43:41 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Mar 2026 21:07:20 +0800</lastBuildDate>
     <atom:link href="https://ape902.github.io/laoguo.github.io/tags/typescript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[SkillHub 爆款] ydc-ai-sdk-integration：解决多源 AI 工具链割裂问题，实现 You.com 与 Vercel AI SDK 的零胶水集成</title>
+      <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-13-skillhub-ydc-ai-sdk-integration/</link>
+      <pubDate>Fri, 13 Mar 2026 21:07:20 +0800</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-13-skillhub-ydc-ai-sdk-integration/</guid>
+      <description>本文深度剖析 ydc-ai-sdk-integration 技能——一款专为全栈 AI 应用开发者设计的标准化桥接层。从架构原理、零配置接入、流式响应优化、错误韧性设计、生产级可观测性到企业级扩展方案，提供 12 个可直接运行的实战代码片段、7 张原创架构图、5 类典型故障复现与修复指南，助你 15 分钟内将 You.com 的实时网络检索能力无缝注入 Vercel AI SDK 驱动的聊天应用。</description>
+    </item>
     <item>
       <title>GitHub 438k Star！freeCodeCamp 为什么这么火？深度解析</title>
       <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-11-github-438k-star-freecodecamp/</link>
