@@ -1,1 +1,75 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>技术热点 on 老郭的技术笔记</title><link>https://ape902.github.io/laoguo.github.io/tags/%E6%8A%80%E6%9C%AF%E7%83%AD%E7%82%B9/</link><description>Recent content in 技术热点 on 老郭的技术笔记</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Thu, 12 Mar 2026 11:07:23 +0800</lastBuildDate><atom:link href="https://ape902.github.io/laoguo.github.io/tags/%E6%8A%80%E6%9C%AF%E7%83%AD%E7%82%B9/index.xml" rel="self" type="application/rss+xml"/><item><title>387期 vs 1期：为什么这期《科技爱好者周刊》让新手秒懂、老手直呼‘早该这样’？</title><link>https://ape902.github.io/laoguo.github.io/posts/2026-03-12-387-vs-1/</link><pubDate>Thu, 12 Mar 2026 11:07:23 +0800</pubDate><guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-12-387-vs-1/</guid><description>这里记录每周值得分享的科技内容，周五发布。......</description></item><item><title>5 个被严重低估的 JavaScript 原生 API：为什么你还在用 Lodash？</title><link>https://ape902.github.io/laoguo.github.io/posts/2026-03-12-5-javascript-api-lodash/</link><pubDate>Thu, 12 Mar 2026 08:01:28 +0800</pubDate><guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-12-5-javascript-api-lodash/</guid><description>...</description></item><item><title>5 个被严重低估的 CSS 技巧：为什么你还在用 JS 实现 hover 动画？</title><link>https://ape902.github.io/laoguo.github.io/posts/2026-03-12-5-css-js-hover/</link><pubDate>Thu, 12 Mar 2026 06:01:41 +0800</pubDate><guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-12-5-css-js-hover/</guid><description>...</description></item><item><title>5 个被高估的前端‘新宠’？React Server Components vs Next.js App Router：初学者该学哪个？</title><link>https://ape902.github.io/laoguo.github.io/posts/2026-03-12-5-react-server-components-vs-next-js-app/</link><pubDate>Thu, 12 Mar 2026 04:02:13 +0800</pubDate><guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-12-5-react-server-components-vs-next-js-app/</guid><description>...</description></item><item><title>GitHub 438k Star！freeCodeCamp 为什么这么火？深度解析</title><link>https://ape902.github.io/laoguo.github.io/posts/2026-03-11-github-438k-star-freecodecamp/</link><pubDate>Wed, 11 Mar 2026 16:43:41 +0000</pubDate><guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-11-github-438k-star-freecodecamp/</guid><description>深度解析热门项目 freeCodeCamp，从功能特点到实战应用，带你快速了解这个项目为什么这么火。</description></item><item><title>5 个被高估的前端‘新宠’？React Server Components vs Next.js App Router：初学者该学哪个？</title><link>https://ape902.github.io/laoguo.github.io/posts/2026-03-11-5-react-server-components-vs-next-js-app/</link><pubDate>Wed, 11 Mar 2026 22:01:54 +0800</pubDate><guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-11-5-react-server-components-vs-next-js-app/</guid><description>...</description></item><item><title>5 个被高估的前端‘新宠’？React Server Components vs. SSG/SSR/CSR，初学者真该立刻上手吗？</title><link>https://ape902.github.io/laoguo.github.io/posts/2026-03-11-5-react-server-components-vs-ssg-ssr-csr/</link><pubDate>Wed, 11 Mar 2026 20:02:05 +0800</pubDate><guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-11-5-react-server-components-vs-ssg-ssr-csr/</guid><description>...</description></item><item><title>3 种主流前端状态管理方案对比：Redux、Zustand 与 Jotai，谁才是 2024 年轻应用的最优解？</title><link>https://ape902.github.io/laoguo.github.io/posts/2026-03-11-3-redux-zustand-jotai-2024/</link><pubDate>Wed, 11 Mar 2026 18:01:47 +0800</pubDate><guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-11-3-redux-zustand-jotai-2024/</guid><description>...</description></item><item><title>GitHub 438k Star！freeCodeCamp 为什么这么火？深度解析</title><link>https://ape902.github.io/laoguo.github.io/posts/2026-03-11-github-438k-star-freecodecamp-%E4%B8%BA%E4%BB%80%E4%B9%88%E8%BF%99%E4%B9%88%E7%81%AB%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90/</link><pubDate>Wed, 11 Mar 2026 16:08:23 +0800</pubDate><guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-11-github-438k-star-freecodecamp-%E4%B8%BA%E4%BB%80%E4%B9%88%E8%BF%99%E4%B9%88%E7%81%AB%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90/</guid><description>深度解析热门项目 freeCodeCamp，从功能特点到实战应用，带你快速了解这个项目为什么这么火。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>技术热点 on 老郭的技术笔记</title>
+    <link>https://ape902.github.io/laoguo.github.io/tags/%E6%8A%80%E6%9C%AF%E7%83%AD%E7%82%B9/</link>
+    <description>Recent content in 技术热点 on 老郭的技术笔记</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 12 Mar 2026 11:07:23 +0800</lastBuildDate>
+    <atom:link href="https://ape902.github.io/laoguo.github.io/tags/%E6%8A%80%E6%9C%AF%E7%83%AD%E7%82%B9/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>387期 vs 1期：为什么这期《科技爱好者周刊》让新手秒懂、老手直呼‘早该这样’？</title>
+      <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-12-387-vs-1/</link>
+      <pubDate>Thu, 12 Mar 2026 11:07:23 +0800</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-12-387-vs-1/</guid>
+      <description>这里记录每周值得分享的科技内容，周五发布。......</description>
+    </item>
+    <item>
+      <title>5 个被严重低估的 JavaScript 原生 API：为什么你还在用 Lodash？</title>
+      <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-12-5-javascript-api-lodash/</link>
+      <pubDate>Thu, 12 Mar 2026 08:01:28 +0800</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-12-5-javascript-api-lodash/</guid>
+      <description>...</description>
+    </item>
+    <item>
+      <title>5 个被严重低估的 CSS 技巧：为什么你还在用 JS 实现 hover 动画？</title>
+      <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-12-5-css-js-hover/</link>
+      <pubDate>Thu, 12 Mar 2026 06:01:41 +0800</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-12-5-css-js-hover/</guid>
+      <description>...</description>
+    </item>
+    <item>
+      <title>5 个被高估的前端‘新宠’？React Server Components vs Next.js App Router：初学者该学哪个？</title>
+      <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-12-5-react-server-components-vs-next-js-app/</link>
+      <pubDate>Thu, 12 Mar 2026 04:02:13 +0800</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-12-5-react-server-components-vs-next-js-app/</guid>
+      <description>...</description>
+    </item>
+    <item>
+      <title>GitHub 438k Star！freeCodeCamp 为什么这么火？深度解析</title>
+      <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-11-github-438k-star-freecodecamp/</link>
+      <pubDate>Wed, 11 Mar 2026 16:43:41 +0000</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-11-github-438k-star-freecodecamp/</guid>
+      <description>深度解析热门项目 freeCodeCamp，从功能特点到实战应用，带你快速了解这个项目为什么这么火。</description>
+    </item>
+    <item>
+      <title>5 个被高估的前端‘新宠’？React Server Components vs Next.js App Router：初学者该学哪个？</title>
+      <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-11-5-react-server-components-vs-next-js-app/</link>
+      <pubDate>Wed, 11 Mar 2026 22:01:54 +0800</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-11-5-react-server-components-vs-next-js-app/</guid>
+      <description>...</description>
+    </item>
+    <item>
+      <title>5 个被高估的前端‘新宠’？React Server Components vs. SSG/SSR/CSR，初学者真该立刻上手吗？</title>
+      <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-11-5-react-server-components-vs-ssg-ssr-csr/</link>
+      <pubDate>Wed, 11 Mar 2026 20:02:05 +0800</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-11-5-react-server-components-vs-ssg-ssr-csr/</guid>
+      <description>...</description>
+    </item>
+    <item>
+      <title>3 种主流前端状态管理方案对比：Redux、Zustand 与 Jotai，谁才是 2024 年轻应用的最优解？</title>
+      <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-11-3-redux-zustand-jotai-2024/</link>
+      <pubDate>Wed, 11 Mar 2026 18:01:47 +0800</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-11-3-redux-zustand-jotai-2024/</guid>
+      <description>...</description>
+    </item>
+    <item>
+      <title>GitHub 438k Star！freeCodeCamp 为什么这么火？深度解析</title>
+      <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-11-github-438k-star-freecodecamp-%E4%B8%BA%E4%BB%80%E4%B9%88%E8%BF%99%E4%B9%88%E7%81%AB%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90/</link>
+      <pubDate>Wed, 11 Mar 2026 16:08:23 +0800</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-11-github-438k-star-freecodecamp-%E4%B8%BA%E4%BB%80%E4%B9%88%E8%BF%99%E4%B9%88%E7%81%AB%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90/</guid>
+      <description>深度解析热门项目 freeCodeCamp，从功能特点到实战应用，带你快速了解这个项目为什么这么火。</description>
+    </item>
+  </channel>
+</rss>

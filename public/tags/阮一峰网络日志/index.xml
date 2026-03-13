@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>阮一峰网络日志 on 老郭的技术笔记</title><link>https://ape902.github.io/laoguo.github.io/tags/%E9%98%AE%E4%B8%80%E5%B3%B0%E7%BD%91%E7%BB%9C%E6%97%A5%E5%BF%97/</link><description>Recent content in 阮一峰网络日志 on 老郭的技术笔记</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Thu, 12 Mar 2026 11:07:23 +0800</lastBuildDate><atom:link href="https://ape902.github.io/laoguo.github.io/tags/%E9%98%AE%E4%B8%80%E5%B3%B0%E7%BD%91%E7%BB%9C%E6%97%A5%E5%BF%97/index.xml" rel="self" type="application/rss+xml"/><item><title>387期 vs 1期：为什么这期《科技爱好者周刊》让新手秒懂、老手直呼‘早该这样’？</title><link>https://ape902.github.io/laoguo.github.io/posts/2026-03-12-387-vs-1/</link><pubDate>Thu, 12 Mar 2026 11:07:23 +0800</pubDate><guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-12-387-vs-1/</guid><description>这里记录每周值得分享的科技内容，周五发布。......</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>阮一峰网络日志 on 老郭的技术笔记</title>
+    <link>https://ape902.github.io/laoguo.github.io/tags/%E9%98%AE%E4%B8%80%E5%B3%B0%E7%BD%91%E7%BB%9C%E6%97%A5%E5%BF%97/</link>
+    <description>Recent content in 阮一峰网络日志 on 老郭的技术笔记</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 12 Mar 2026 11:07:23 +0800</lastBuildDate>
+    <atom:link href="https://ape902.github.io/laoguo.github.io/tags/%E9%98%AE%E4%B8%80%E5%B3%B0%E7%BD%91%E7%BB%9C%E6%97%A5%E5%BF%97/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>387期 vs 1期：为什么这期《科技爱好者周刊》让新手秒懂、老手直呼‘早该这样’？</title>
+      <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-12-387-vs-1/</link>
+      <pubDate>Thu, 12 Mar 2026 11:07:23 +0800</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-12-387-vs-1/</guid>
+      <description>这里记录每周值得分享的科技内容，周五发布。......</description>
+    </item>
+  </channel>
+</rss>
