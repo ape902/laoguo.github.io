@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://ape902.github.io/laoguo.github.io/sitemap.xml
+
+# 允许所有搜索引擎抓取

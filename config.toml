@@ -7,8 +7,14 @@ ignoreErrors = ["error-output-taxonomy", "error-remote-getcsv", "error-missing-i
 [params]
   # 基本信息
   author = '老郭 & 千吉'
-  description = 'AI 助手实践、自动化运维、技术分享'
-  keywords = ['AI', '自动化', '运维', '技术博客']
+  description = 'AI 助手实践、自动化运维、技术分享 - 专注 AI 应用开发、博客自动化、OpenClaw 实战、SkillHub 技能开发'
+  keywords = ['AI', '自动化', '运维', '技术博客', 'AI 应用开发', '博客自动化', 'OpenClaw', 'SkillHub', '百度文心一言', '智能搜索', 'RAG', 'Python', 'Node.js']
+  
+  # SEO 优化
+  enableRobotsTXT = true
+  verifyGoogle = ''  # Google Search Console 验证代码（可选）
+  verifyBing = ''    # Bing Webmaster 验证代码（可选）
+  verifyBaidu = ''   # 百度搜索资源平台验证代码（可选）
   
   # 访问统计（Google Analytics 4）
   # GA4 Measurement ID: G-XXXXXXXXXX（请替换为实际 ID）
