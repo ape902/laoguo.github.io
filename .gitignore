@@ -1,0 +1,16 @@
+# Hugo
+.hugo_build.lock
+public/
+
+# Themes
+themes/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
