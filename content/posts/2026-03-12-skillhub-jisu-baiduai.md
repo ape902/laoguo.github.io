@@ -526,9 +526,50 @@ app.post('/search', async (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`✅ jisu-baiduai 服务启动
+  console.log(`✅ jisu-baiduai 服务启动于端口 ${PORT}`);
+});
+```
 
-## 三、服务健壮性增强与可观测性建设
+#### ▪ Java 快速体验（Spring Boot 集成）
+
+```java
+// DemoApplication.java
+package com.example.demo;
+
+import ai.skillhub.jisu.JisuBaiduAI;
+import ai.skillhub.jisu.SearchResult;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.*;
+
+@SpringBootApplication
+@RestController
+public class DemoApplication {
+
+    private final JisuBaiduAI jisu;
+
+    public DemoApplication() {
+        // 初始化 SDK（自动读取 SKILLHUB_API_KEY 环境变量）
+        this.jisu = new JisuBaiduAI.Builder()
+            .defaultScene("general_knowledge")
+            .debug(true)
+            .build();
+    }
+
+    @PostMapping("/search")
+    public SearchResult search(@RequestBody SearchRequest req) {
+        return jisu.search(req.getQuery(), req.getUserId(), req.getDeviceType());
+    }
+
+    public static void main(String[] args) {
+        SpringApplication.run(DemoApplication.class, args);
+    }
+}
+```
+
+---
+
+## ④ 服务健壮性增强与可观测性建设
 
 当前接口已具备基础问答能力，但生产环境需进一步提升稳定性与可维护性。我们通过以下方式强化服务健壮性：
 
@@ -551,7 +592,7 @@ app.use((req, res, next) => {
 });
 ```
 
-## 四、前端集成与用户体验优化
+## ⑤ 前端集成与用户体验优化
 
 服务端提供标准 RESTful API 后，前端可通过 `fetch` 或 `axios` 轻松对接。推荐采用以下实践提升用户体验：
 
@@ -559,7 +600,7 @@ app.use((req, res, next) => {
 - **加载态与错误反馈**：前端需展示明确的加载动画（如骨架屏）、超时重试按钮，并对 `500` 错误中的 `err.code`（如 `LLM_TIMEOUT`、`RETRIEVER_UNAVAILABLE`）做差异化提示；
 - **来源卡片交互**：`sources` 数组中每个条目应渲染为可点击卡片，点击后在新标签页打开 `url`，并附带 `?utm_source=jisu-baiduai&utm_medium=referral` 参数用于效果归因。
 
-## 五、部署与运维说明
+## ⑥ 部署与运维说明
 
 本服务采用无状态设计，可无缝部署至主流云平台：
 
@@ -578,18 +619,11 @@ PORT=3000 \
 npm start
 ```
 
-## 六、总结
+## ⑦ 部署、运维与可观测性实践（进阶）
 
-本文完整实现了基于百度千帆大模型与自建知识库的智能问答服务：从前端请求接收、多阶段语义检索（RAG）、大模型精准生成，到结构化结果封装与错误兜底，每一环节均兼顾功能性与工程规范性。通过引入限流、校验、超时、日志、监控等生产级能力，该服务已具备企业内部落地条件。后续可沿三个方向持续演进：  
-① **效果优化**：接入更先进的重排序模型（如 BGE-Reranker）提升检索相关性；  
-② **成本控制**：对长文档实施分块策略优化 token 消耗，结合缓存层降低 LLM 调用频次；  
-③ **安全加固**：增加输出内容合规性检测（如敏感信息脱敏、价值观对齐校验）。  
-代码已开源，欢迎在真实业务场景中验证与共建。
+上节介绍了基础部署方案，本节深入讲解生产环境的高级部署与可观测性建设。
 
-
-## 七、部署与可观测性实践
-
-在生产环境中，服务的稳定性不仅依赖于代码质量，更取决于可部署性与可观测性能力。本节介绍如何将服务容器化部署至 Kubernetes 集群，并集成主流可观测性工具链。
+### 7.1 容器化构建与镜像优化（进阶）
 
 ### 7.1 容器化构建与镜像优化  
 使用多阶段 Docker 构建，分离构建环境与运行时环境，最终镜像仅包含 Node.js 运行时、精简依赖及静态资源：
@@ -633,7 +667,7 @@ CMD ["npm", "start"]
 
 所有监控看板已预置 Grafana 模板，支持按时间范围筛选 P95 延迟突增、LLM 错误率飙升、缓存击穿等典型异常模式。
 
-## 八、常见问题与调试指南
+## ⑧ 常见问题与调试指南
 
 | 问题现象 | 可能原因 | 快速诊断命令 | 解决方案 |
 |----------|----------|----------------|-----------|
@@ -644,7 +678,7 @@ CMD ["npm", "start"]
 
 > 💡 提示：所有调试接口（如 `/debug/*`）默认仅在 `NODE_ENV=development` 下启用，生产环境自动禁用，保障安全性。
 
-## 九、总结  
+## ⑨ 总结与延伸  
 
 本文从架构设计、核心实现、工程规范、部署运维到问题治理，系统性呈现了一个企业级 RAG 问答服务的完整落地路径。我们不仅实现了「语义检索 + 大模型生成」的技术闭环，更将可观测性、弹性伸缩、故障自愈等生产要素深度融入每一层——从前端请求解析的输入校验，到向量检索的缓存穿透防护；从 LLM 调用的熔断降级，到全链路 trace 的根因定位。  
 

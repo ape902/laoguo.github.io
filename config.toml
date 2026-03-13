@@ -2,6 +2,7 @@ baseURL = 'https://ape902.github.io/'
 languageCode = 'zh-cn'
 title = '老郭的技术笔记'
 theme = 'PaperMod'
+ignoreErrors = ["error-output-taxonomy", "error-remote-getcsv", "error-missing-instagram-accesstoken"]
 
 [params]
   # 基本信息
