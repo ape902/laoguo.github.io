@@ -6,13 +6,41 @@
     <description>Recent content in Tags on 老郭的技术笔记</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 13 Mar 2026 16:03:29 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 13 Mar 2026 18:20:00 +0800</lastBuildDate>
     <atom:link href="https://ape902.github.io/laoguo.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>AI辅助测试</title>
-      <link>https://ape902.github.io/laoguo.github.io/tags/ai%E8%BE%85%E5%8A%A9%E6%B5%8B%E8%AF%95/</link>
+      <title>AI 工具</title>
+      <link>https://ape902.github.io/laoguo.github.io/tags/ai-%E5%B7%A5%E5%85%B7/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ape902.github.io/laoguo.github.io/tags/ai%E8%BE%85%E5%8A%A9%E6%B5%8B%E8%AF%95/</guid>
+      <guid>https://ape902.github.io/laoguo.github.io/tags/ai-%E5%B7%A5%E5%85%B7/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SkillHub</title>
+      <link>https://ape902.github.io/laoguo.github.io/tags/skillhub/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/tags/skillhub/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>小红书</title>
+      <link>https://ape902.github.io/laoguo.github.io/tags/%E5%B0%8F%E7%BA%A2%E4%B9%A6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/tags/%E5%B0%8F%E7%BA%A2%E4%B9%A6/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>社交媒体</title>
+      <link>https://ape902.github.io/laoguo.github.io/tags/%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/tags/%E7%A4%BE%E4%BA%A4%E5%AA%92%E4%BD%93/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>自动化</title>
+      <link>https://ape902.github.io/laoguo.github.io/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/</guid>
       <description></description>
     </item>
     <item>
@@ -20,6 +48,13 @@
       <link>https://ape902.github.io/laoguo.github.io/tags/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://ape902.github.io/laoguo.github.io/tags/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>变异测试</title>
+      <link>https://ape902.github.io/laoguo.github.io/tags/%E5%8F%98%E5%BC%82%E6%B5%8B%E8%AF%95/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/tags/%E5%8F%98%E5%BC%82%E6%B5%8B%E8%AF%95/</guid>
       <description></description>
     </item>
     <item>
@@ -65,6 +100,13 @@
       <description></description>
     </item>
     <item>
+      <title>技术文章</title>
+      <link>https://ape902.github.io/laoguo.github.io/tags/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/tags/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>OpenClaw</title>
       <link>https://ape902.github.io/laoguo.github.io/tags/openclaw/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -83,13 +125,6 @@
       <link>https://ape902.github.io/laoguo.github.io/tags/%E6%8A%80%E6%9C%AF%E5%88%86%E6%9E%90/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://ape902.github.io/laoguo.github.io/tags/%E6%8A%80%E6%9C%AF%E5%88%86%E6%9E%90/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>自动化</title>
-      <link>https://ape902.github.io/laoguo.github.io/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ape902.github.io/laoguo.github.io/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/</guid>
       <description></description>
     </item>
     <item>
@@ -132,13 +167,6 @@
       <link>https://ape902.github.io/laoguo.github.io/tags/%E4%BA%91%E5%8E%9F%E7%94%9F/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://ape902.github.io/laoguo.github.io/tags/%E4%BA%91%E5%8E%9F%E7%94%9F/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>技术文章</title>
-      <link>https://ape902.github.io/laoguo.github.io/tags/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ape902.github.io/laoguo.github.io/tags/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/</guid>
       <description></description>
     </item>
     <item>

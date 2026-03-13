@@ -6,8 +6,15 @@
     <description>Recent content in 技术文章 on 老郭的技术笔记</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 12 Mar 2026 17:11:55 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 13 Mar 2026 16:44:59 +0800</lastBuildDate>
     <atom:link href="https://ape902.github.io/laoguo.github.io/tags/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[SkillHub 爆款] ydc-openai-agent-sdk-integration：解决多端智能体协同难、MCP 协议接入门槛高问题，首周集成效率提升 3.2 倍</title>
+      <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-13-skillhub-ydc-openai-agent-sdk-integration/</link>
+      <pubDate>Fri, 13 Mar 2026 16:44:59 +0800</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-13-skillhub-ydc-openai-agent-sdk-integration/</guid>
+      <description>深度解析 ydc-openai-agent-sdk-integration 1.0.0 —— 专为 You.com MCP（Model Control Protocol）服务器定制的 OpenAI Agents SDK 无缝桥接方案。本文涵盖协议对齐原理、零配置代理层设计、生产级错误熔断机制、全链路可观测性埋点，并提供 7 个可直接运行的实战案例（含本地调试、云函数部署、流式 UI 集成、多工具编</description>
+    </item>
     <item>
       <title>[SkillHub 爆款] jisu-baiduai：解决企业级智能搜索接入门槛高、响应延迟大、语义理解弱三大痛点，实测QPS提升3.8倍，首屏平均响应降至217ms</title>
       <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-12-skillhub-jisu-baiduai/</link>
