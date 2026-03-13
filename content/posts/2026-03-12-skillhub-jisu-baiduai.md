@@ -659,7 +659,7 @@ python demo_python.py
 ```
 
 预期输出：
-```
+```text
 ✅ 搜索成功！
 🔍 意图分类：science_explanation
 💡 置信度：0.96
