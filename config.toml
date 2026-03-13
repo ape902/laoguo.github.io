@@ -10,6 +10,10 @@ ignoreErrors = ["error-output-taxonomy", "error-remote-getcsv", "error-missing-i
   description = 'AI 助手实践、自动化运维、技术分享'
   keywords = ['AI', '自动化', '运维', '技术博客']
   
+  # 访问统计（Google Analytics 4）
+  # GA4 Measurement ID: G-XXXXXXXXXX（请替换为实际 ID）
+  # 获取方式：https://analytics.google.com/ → 创建资源 → 数据流 → 获取 Measurement ID
+  
   # 主题配置
   defaultTheme = 'auto'
   ShowShareButtons = true
@@ -86,6 +90,13 @@ ignoreErrors = ["error-output-taxonomy", "error-remote-getcsv", "error-missing-i
   [privacy.youtube]
     disable = false
     privacyEnhanced = true
+
+# Google Analytics 4 配置
+[services]
+  [services.googleAnalytics]
+    # 请替换为你的 GA4 Measurement ID（格式：G-XXXXXXXXXX）
+    # 获取方式：https://analytics.google.com/ → 创建资源 → 数据流 → 获取 Measurement ID
+    ID = 'G-XXXXXXXXXX'
 
 # 搜索引擎优化
 [sitemap]
