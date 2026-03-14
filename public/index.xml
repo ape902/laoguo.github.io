@@ -6,8 +6,17 @@
     <description>Recent content on 老郭的技术笔记</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 14 Mar 2026 22:29:13 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 15 Mar 2026 00:29:06 +0800</lastBuildDate>
     <atom:link href="https://ape902.github.io/laoguo.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>零安装的&#34;云养虾&#34;：ArkClaw 使用指南——Wasm 原生工具链革命</title>
+      <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-15-tech-article/</link>
+      <pubDate>Sun, 15 Mar 2026 00:29:06 +0800</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-15-tech-article/</guid>
+      <description>零安装的&amp;quot;云养虾&amp;quot;：ArkClaw 使用指南——一场面向开发者的无服务器交互范式革命 一、引言：当“龙虾”不再需要水族箱——为什么我们正在集体转向“云养虾”？ 过去七十二小时，中文技术社区被一只“龙虾”搅动得风起云涌。它并非生物学意义上的甲壳纲动物，而是一个代号为 ArkClaw（非 OpenClaw，后者为早期误传名称）的开源项目——由国内一支跨时区协作的轻量级工具链团队于 2026 年 3 月 12 日正式发布。其 GitHub 仓库在 48 小时内收获星标突破 18,000，NPM 下载量单日峰值达 247 万次，Discord 社群成员数在 36 小时内突破 12,000 人。更令人惊异的是：所有这些交互，几乎都发生在用户未执行任何 npm install、未配置 Node.js 环境、未下载 Docker 镜像、甚至未打开终端的前提下。
+这就是 ArkClaw 所宣称的“零安装的云养虾”——一个将传统 CLI 工具链彻底解构、重铸为可即时加载、按需执行、沙箱隔离、跨平台一致的 WebAssembly（Wasm）原生工作流的新范式。“养虾”，是开发者对“运行远程命令/服务”的戏谑表达；而“云养”，则直指其核心能力：无需本地环境准备，仅凭一个 URL 或一行浏览器地址栏输入，即可唤起完整功能模块，完成代码生成、依赖分析、安全扫描、CI 模拟等典型工程任务。
+这并非又一次“玩具级 PWA 应用”的营销噱头。ArkClaw 的底层运行时基于 WASI（WebAssembly System Interface）标准，通过 Rust 编写的轻量级宿主引擎 arkd 实现对 POSIX 兼容系统调用的精确模拟，并与浏览器的 WebAssembly.compileStreaming() 和 navigator.permissions.query() 深度协同。其 CLI 客户端 ark 本身就是一个 127KB 的纯静态 Wasm 模块，可通过 &amp;lt;script type=&amp;quot;module&amp;quot;&amp;gt; 直接导入，亦可作为独立二进制嵌入 Electron 或 Deno 运行时。更重要的是，它首次实现了“工具即服务、服务即函数、函数即 URL”的三级抽象跃迁——每一个 ArkClaw 功能单元（称为 clawlet），本质是一个符合 OCI（Open Container Initiative）镜像规范的 .</description>
+    </item>
     <item>
       <title>测试是新的护城河：当&#34;写完即上线&#34;成为高危操作</title>
       <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-14-tech-article/</link>

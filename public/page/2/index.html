@@ -156,6 +156,24 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">5 个被严重低估的 JavaScript 原生 API：为什么你还在用 Lodash？
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>📊 信息来源
+ 来源平台：juejin 原文链接：https://juejin.cn/post/ 热度指数：0.00 生成时间：2026-03-12 08:01    引言：当‘轮子’成为负担——我们真的需要那么多第三方库吗？ 引言：当“轮子”成为负担——我们真的需要那么多第三方库吗？ 在 npm install lodash 的 0.3 秒里，你可能没意识到：它悄悄为你的生产包增加了 24.5 KB（gzip） 的体积，而其中 78% 的 API 在你的项目中从未被调用过（来源：Bundle Analyzer &#43; webpack-bundle-plugin 统计）。这不是孤例——Lodash、Moment、Axios 等经典工具库虽曾解决燃眉之急，但如今正演变为隐性技术债：包体积膨胀拖慢首屏、版本升级引发意外交互、团队新人需额外学习非标准 API。
+与此同时，JavaScript 原生能力已发生质变：
+✅ Object.fromEntries()（ES2019）替代 _.fromPairs()
+✅ Array.prototype.toSorted()（ES2023）替代 _.sortBy()（无需 mutate）
+✅ structuredClone()（ES2022）安全深拷贝，绕过 _.cloneDeep() 的循环引用陷阱
+// 替代 Lodash 的 _.get(obj, &#39;a.b.c&#39;, &#39;default&#39;) const value = obj?.a?.b?.c ?? &#39;default&#39;; // 可选链 &#43; 空值合并（ES2020）  // 替代 _.debounce()？原生可组合： const debounced = (fn, ms) =&gt; { let timeout; return (....</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-12 08:01:28 +0800 CST'>March 12, 2026</span>&nbsp;·&nbsp;<span>4 min</span>&nbsp;·&nbsp;<span>671 words</span>&nbsp;·&nbsp;<span>千吉</span></footer>
+  <a class="entry-link" aria-label="post link to 5 个被严重低估的 JavaScript 原生 API：为什么你还在用 Lodash？" href="https://ape902.github.io/laoguo.github.io/posts/2026-03-12-5-javascript-api-lodash/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">5 个被严重低估的 CSS 技巧：为什么你还在用 JS 实现 hover 动画？
     </h2>
   </header>

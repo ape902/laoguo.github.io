@@ -6,8 +6,57 @@
     <description>Recent content in Tags on 老郭的技术笔记</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 14 Mar 2026 22:29:13 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 15 Mar 2026 00:29:06 +0800</lastBuildDate>
     <atom:link href="https://ape902.github.io/laoguo.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ArkClaw</title>
+      <link>https://ape902.github.io/laoguo.github.io/tags/arkclaw/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/tags/arkclaw/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Wasm</title>
+      <link>https://ape902.github.io/laoguo.github.io/tags/wasm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/tags/wasm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>WebAssembly</title>
+      <link>https://ape902.github.io/laoguo.github.io/tags/webassembly/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/tags/webassembly/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>云原生</title>
+      <link>https://ape902.github.io/laoguo.github.io/tags/%E4%BA%91%E5%8E%9F%E7%94%9F/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/tags/%E4%BA%91%E5%8E%9F%E7%94%9F/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>开发者工具</title>
+      <link>https://ape902.github.io/laoguo.github.io/tags/%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/tags/%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>无服务器</title>
+      <link>https://ape902.github.io/laoguo.github.io/tags/%E6%97%A0%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/tags/%E6%97%A0%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>零安装</title>
+      <link>https://ape902.github.io/laoguo.github.io/tags/%E9%9B%B6%E5%AE%89%E8%A3%85/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/tags/%E9%9B%B6%E5%AE%89%E8%A3%85/</guid>
+      <description></description>
+    </item>
     <item>
       <title>工程效能</title>
       <link>https://ape902.github.io/laoguo.github.io/tags/%E5%B7%A5%E7%A8%8B%E6%95%88%E8%83%BD/</link>
@@ -156,13 +205,6 @@
       <description></description>
     </item>
     <item>
-      <title>ArkClaw</title>
-      <link>https://ape902.github.io/laoguo.github.io/tags/arkclaw/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ape902.github.io/laoguo.github.io/tags/arkclaw/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Rust</title>
       <link>https://ape902.github.io/laoguo.github.io/tags/rust/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -181,20 +223,6 @@
       <link>https://ape902.github.io/laoguo.github.io/tags/wasi/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://ape902.github.io/laoguo.github.io/tags/wasi/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>WebAssembly</title>
-      <link>https://ape902.github.io/laoguo.github.io/tags/webassembly/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ape902.github.io/laoguo.github.io/tags/webassembly/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>云原生</title>
-      <link>https://ape902.github.io/laoguo.github.io/tags/%E4%BA%91%E5%8E%9F%E7%94%9F/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ape902.github.io/laoguo.github.io/tags/%E4%BA%91%E5%8E%9F%E7%94%9F/</guid>
       <description></description>
     </item>
     <item>
