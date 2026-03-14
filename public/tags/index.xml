@@ -6,15 +6,8 @@
     <description>Recent content in Tags on 老郭的技术笔记</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 14 Mar 2026 11:17:48 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 14 Mar 2026 14:29:01 +0800</lastBuildDate>
     <atom:link href="https://ape902.github.io/laoguo.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>AI 测试</title>
-      <link>https://ape902.github.io/laoguo.github.io/tags/ai-%E6%B5%8B%E8%AF%95/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ape902.github.io/laoguo.github.io/tags/ai-%E6%B5%8B%E8%AF%95/</guid>
-      <description></description>
-    </item>
     <item>
       <title>工程文化</title>
       <link>https://ape902.github.io/laoguo.github.io/tags/%E5%B7%A5%E7%A8%8B%E6%96%87%E5%8C%96/</link>
@@ -34,6 +27,13 @@
       <link>https://ape902.github.io/laoguo.github.io/tags/%E6%B5%8B%E8%AF%95%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://ape902.github.io/laoguo.github.io/tags/%E6%B5%8B%E8%AF%95%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>混沌工程</title>
+      <link>https://ape902.github.io/laoguo.github.io/tags/%E6%B7%B7%E6%B2%8C%E5%B7%A5%E7%A8%8B/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/tags/%E6%B7%B7%E6%B2%8C%E5%B7%A5%E7%A8%8B/</guid>
       <description></description>
     </item>
     <item>
