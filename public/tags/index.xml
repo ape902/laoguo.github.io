@@ -6,27 +6,13 @@
     <description>Recent content in Tags on 老郭的技术笔记</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 14 Mar 2026 18:28:51 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 14 Mar 2026 20:28:49 +0800</lastBuildDate>
     <atom:link href="https://ape902.github.io/laoguo.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>工程文化</title>
-      <link>https://ape902.github.io/laoguo.github.io/tags/%E5%B7%A5%E7%A8%8B%E6%96%87%E5%8C%96/</link>
+      <title>工程效能</title>
+      <link>https://ape902.github.io/laoguo.github.io/tags/%E5%B7%A5%E7%A8%8B%E6%95%88%E8%83%BD/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ape902.github.io/laoguo.github.io/tags/%E5%B7%A5%E7%A8%8B%E6%96%87%E5%8C%96/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>架构演进</title>
-      <link>https://ape902.github.io/laoguo.github.io/tags/%E6%9E%B6%E6%9E%84%E6%BC%94%E8%BF%9B/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ape902.github.io/laoguo.github.io/tags/%E6%9E%B6%E6%9E%84%E6%BC%94%E8%BF%9B/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>测试自动化</title>
-      <link>https://ape902.github.io/laoguo.github.io/tags/%E6%B5%8B%E8%AF%95%E8%87%AA%E5%8A%A8%E5%8C%96/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ape902.github.io/laoguo.github.io/tags/%E6%B5%8B%E8%AF%95%E8%87%AA%E5%8A%A8%E5%8C%96/</guid>
+      <guid>https://ape902.github.io/laoguo.github.io/tags/%E5%B7%A5%E7%A8%8B%E6%95%88%E8%83%BD/</guid>
       <description></description>
     </item>
     <item>
@@ -34,6 +20,13 @@
       <link>https://ape902.github.io/laoguo.github.io/tags/%E6%B5%8B%E8%AF%95%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://ape902.github.io/laoguo.github.io/tags/%E6%B5%8B%E8%AF%95%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>自动化测试</title>
+      <link>https://ape902.github.io/laoguo.github.io/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</guid>
       <description></description>
     </item>
     <item>
@@ -55,13 +48,6 @@
       <link>https://ape902.github.io/laoguo.github.io/tags/devops/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://ape902.github.io/laoguo.github.io/tags/devops/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>工程效能</title>
-      <link>https://ape902.github.io/laoguo.github.io/tags/%E5%B7%A5%E7%A8%8B%E6%95%88%E8%83%BD/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ape902.github.io/laoguo.github.io/tags/%E5%B7%A5%E7%A8%8B%E6%95%88%E8%83%BD/</guid>
       <description></description>
     </item>
     <item>
