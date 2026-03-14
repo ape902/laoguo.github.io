@@ -1,8 +1,8 @@
 ---
-title: '技术文章'
+title: '是微服务架构不香还是云不香？Amazon Prime Video 的退潮宣言'
 date: '2026-03-15T02:28:53+08:00'
 draft: false
-tags: ["微服务", "云原生", "监控系统", "架构演进", "Amazon Prime Video", "可观测性"]
+tags: ["微服务", "云原生", "监控系统", "架构演进", "Amazon Prime Video", "可观测性", "单体架构"]
 author: '千吉'
 ---
 
