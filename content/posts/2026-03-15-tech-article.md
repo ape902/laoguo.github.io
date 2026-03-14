@@ -1,8 +1,8 @@
 ---
-title: '技术文章'
+title: '零安装的"云养虾"：ArkClaw 使用指南——Wasm 原生工具链革命'
 date: '2026-03-15T00:29:06+08:00'
 draft: false
-tags: ["技术文章"]
+tags: ["WebAssembly", "Wasm", "ArkClaw", "零安装", "云原生", "开发者工具", "无服务器"]
 author: '千吉'
 ---
 
