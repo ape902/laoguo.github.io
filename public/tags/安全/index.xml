@@ -1,26 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>安全 on 老郭的技术笔记</title>
-    <link>https://ape902.github.io/laoguo.github.io/tags/%E5%AE%89%E5%85%A8/</link>
-    <description>Recent content in 安全 on 老郭的技术笔记</description>
-    <generator>Hugo</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Fri, 13 Mar 2026 14:00:00 +0800</lastBuildDate>
-    <atom:link href="https://ape902.github.io/laoguo.github.io/tags/%E5%AE%89%E5%85%A8/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>OpenClaw 安全深度解析：25 万暴露实例背后的风险与防护</title>
-      <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-13-openclaw-security-analysis/</link>
-      <pubDate>Fri, 13 Mar 2026 14:00:00 +0800</pubDate>
-      <guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-13-openclaw-security-analysis/</guid>
-      <description>阮一峰周刊第 387 期提到 OpenClaw 有 25 万暴露实例。本文深度分析 OpenClaw 的安全风险、攻击面、防护策略，并提供可落地的安全加固方案。</description>
-    </item>
-    <item>
-      <title>AI 助手安全加固实战：SSH 防护与自动化监控</title>
-      <link>https://ape902.github.io/laoguo.github.io/posts/security-hardening-2026-03-11/</link>
-      <pubDate>Wed, 11 Mar 2026 14:00:00 +0800</pubDate>
-      <guid>https://ape902.github.io/laoguo.github.io/posts/security-hardening-2026-03-11/</guid>
-      <description>记录一次完整的服务器安全加固过程，包括 SSH 配置、fail2ban 部署和自动化监控系统搭建。</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>安全 on 老郭的技术笔记</title><link>https://ape902.github.io/laoguo.github.io/tags/%E5%AE%89%E5%85%A8/</link><description>Recent content in 安全 on 老郭的技术笔记</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Mon, 16 Mar 2026 00:29:35 +0800</lastBuildDate><atom:link href="https://ape902.github.io/laoguo.github.io/tags/%E5%AE%89%E5%85%A8/index.xml" rel="self" type="application/rss+xml"/><item><title>eBPF 介绍</title><link>https://ape902.github.io/laoguo.github.io/posts/2026-03-16-ebpf/</link><pubDate>Mon, 16 Mar 2026 00:29:35 +0800</pubDate><guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-16-ebpf/</guid><description>eBPF 介绍：从内核可编程范式革命到现代云原生基础设施的基石 引言：为什么 eBPF 正在重塑 Linux 的边界？ 在 Linux 系统演进的漫长历史中，内核与用户空间的边界曾被视作一道不可逾越的“高墙”——内核负责核心资源调度、硬件抽象与安全保障，用户空间则承担业务逻辑与灵活扩展。这种分层设计保障了稳定性与安全性，却也带来了沉重的代价：每当需要实现新的网络策略、性能分析或安全审计功能时，开发者往往不得不陷入“修改内核代码 → 编译模块 → 加载驱动 → 重启服务（甚至重启系统）”的冗长闭环。更严峻的是，一次不慎的内核模块（LKM）编写错误，轻则触发 oops，重则直接导致系统 panic。
+而就在这样的背景下，eBPF（extended Berkeley Packet Filter）悄然崛起，并迅速从一个“仅用于包过滤的增强版 BPF”演变为 Linux 内核领域近十年最具颠覆性的技术范式。它不再只是一个网络抓包工具；它是一套安全、沙箱化、高性能、可验证的内核运行时环境，允许开发者在不修改内核源码、不加载内核模块、不重启系统的前提下，向内核注入自定义逻辑。如今，eBPF 已深度嵌入 Cilium 的网络数据平面、Falco 的运行时安全检测、Pixie 的无侵入应用观测、Datadog 和 New Relic 的深度指标采集，乃至 Kubernetes 的 Service Mesh 透明代理与策略执行引擎之中。
+本文并非对 eBPF 技术细节的零散罗列，而是一次系统性、渐进式的深度解读。我们将从其历史渊源与设计哲学出发，厘清它与传统内核模块的本质差异；深入剖析 eBPF 程序的生命周期：从 C 源码编写、LLVM 编译为 eBPF 字节码、内核验证器（verifier）的严苛审查、JIT 编译加速，到最终挂载至内核钩子（hook）并由内核事件触发执行；随后通过多个真实可运行的示例——包括 TCP 连接监控、进程执行追踪、文件访问审计、以及基于 map 的实时统计聚合——完整呈现 eBPF 的工程实践路径；进一步探讨其在可观测性、网络安全、服务网格与性能调优四大核心场景中的落地模式与架构价值；最后直面当前挑战：验证器限制、调试困难、跨内核版本兼容性、以及与传统运维体系的融合鸿沟，并展望 eBPF 生态的未来演进方向——包括 CO-RE（Compile Once – Run Everywhere）的成熟、eBPF 程序的标准化接口（如 libbpf 的 BTF 支持）、以及 eBPF 在非 Linux 环境（如 Windows WSL2、eBPF for Windows）中的探索尝试。</description></item><item><title>OpenClaw 安全深度解析：25 万暴露实例背后的风险与防护</title><link>https://ape902.github.io/laoguo.github.io/posts/2026-03-13-openclaw-security-analysis/</link><pubDate>Fri, 13 Mar 2026 14:00:00 +0800</pubDate><guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-13-openclaw-security-analysis/</guid><description>阮一峰周刊第 387 期提到 OpenClaw 有 25 万暴露实例。本文深度分析 OpenClaw 的安全风险、攻击面、防护策略，并提供可落地的安全加固方案。</description></item><item><title>AI 助手安全加固实战：SSH 防护与自动化监控</title><link>https://ape902.github.io/laoguo.github.io/posts/security-hardening-2026-03-11/</link><pubDate>Wed, 11 Mar 2026 14:00:00 +0800</pubDate><guid>https://ape902.github.io/laoguo.github.io/posts/security-hardening-2026-03-11/</guid><description>记录一次完整的服务器安全加固过程，包括 SSH 配置、fail2ban 部署和自动化监控系统搭建。</description></item></channel></rss>

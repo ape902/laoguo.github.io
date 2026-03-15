@@ -1,42 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>技术文章 on 老郭的技术笔记</title>
-    <link>https://ape902.github.io/laoguo.github.io/tags/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/</link>
-    <description>Recent content in 技术文章 on 老郭的技术笔记</description>
-    <generator>Hugo</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Sun, 15 Mar 2026 14:03:16 +0800</lastBuildDate>
-    <atom:link href="https://ape902.github.io/laoguo.github.io/tags/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>聊聊 nostr 和 审查</title>
-      <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-15-nostr/</link>
-      <pubDate>Sun, 15 Mar 2026 14:03:16 +0800</pubDate>
-      <guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-15-nostr/</guid>
-      <description>聊聊 nostr 和 审查 引子：一场“下架”引发的集体追问 2023 年初，一款名为 Damus 的 iOS 社交应用在苹果 App Store 上线，仅一天后便从中国区商店悄然消失。官方公告语焉不详，仅称“因违反中国法律法规”，但用户社区迅速达成共识：这并非偶然的技术合规问题，而是一次对新型去中心化通信协议——nostr（Notes and Other Stuff Relayed）——的首次现实尺度审查响应。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>技术文章 on 老郭的技术笔记</title><link>https://ape902.github.io/laoguo.github.io/tags/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/</link><description>Recent content in 技术文章 on 老郭的技术笔记</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Mon, 16 Mar 2026 04:28:45 +0800</lastBuildDate><atom:link href="https://ape902.github.io/laoguo.github.io/tags/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/index.xml" rel="self" type="application/rss+xml"/><item><title>是微服务架构不香还是云不香？</title><link>https://ape902.github.io/laoguo.github.io/posts/2026-03-16-tech-article/</link><pubDate>Mon, 16 Mar 2026 04:28:45 +0800</pubDate><guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-16-tech-article/</guid><description>是微服务架构不香还是云不香？ 摘要：本文深度解读 Amazon Prime Video 团队于 2023 年 3 月发布的重磅技术博客《规模化 Prime Video 的音视频监控服务》，以该案例为棱镜，系统剖析微服务架构与云平台在超大规模实时媒体场景下的真实表现。我们不回避复杂性——既不神化“云原生万能论”，也不否定微服务的历史功绩；而是通过架构决策的上下文还原、可观测性瓶颈的定量分析、服务治理成本的代码级验证，揭示一个被长期遮蔽的真相：架构的“香”与“不香”，从来不由范式本身决定，而取决于它是否与业务规模、团队能力、交付节奏和运维纵深形成动态适配。 全文含 17 处可运行代码示例、6 类典型反模式诊断脚本、4 个重构前后对比实验，总代码量占比约 31.7%，所有实现均基于真实生产约束建模。
+一、风暴中心：一篇博客为何引爆整个技术圈？ 2023 年 3 月 22 日，Amazon Prime Video 工程团队在官方技术博客发布了一篇题为《Scaling Prime Video’s Audio/Video Monitoring Service》的文章。表面看，这是一份关于音视频质量监控（AVQM）系统的演进总结；但短短 48 小时内，它在中文技术社区引发连锁反应——酷壳转发后 24 小时阅读量破 10 万，“微服务已死”“云原生退潮”等标题党文章批量涌现。然而，真正值得深究的是：为什么一个垂直领域的监控系统重构，能成为压垮“微服务信仰”的最后一根稻草？
+答案藏在博客开篇的一段冷静陈述中：
+“Our original monitoring service was built as a monolith on EC2, with tightly coupled ingestion, analysis, and alerting components. As Prime Video scaled to over 200 million subscribers across 240+ countries, we migrated it to a microservice architecture on AWS ECS — expecting better scalability and resilience.</description></item><item><title>聊聊 nostr 和 审查</title><link>https://ape902.github.io/laoguo.github.io/posts/2026-03-15-nostr/</link><pubDate>Sun, 15 Mar 2026 14:03:16 +0800</pubDate><guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-15-nostr/</guid><description>聊聊 nostr 和 审查 引子：一场“下架”引发的集体追问 2023 年初，一款名为 Damus 的 iOS 社交应用在苹果 App Store 上线，仅一天后便从中国区商店悄然消失。官方公告语焉不详，仅称“因违反中国法律法规”，但用户社区迅速达成共识：这并非偶然的技术合规问题，而是一次对新型去中心化通信协议——nostr（Notes and Other Stuff Relayed）——的首次现实尺度审查响应。
 有趣的是，Damus 本身并不托管任何内容；它不运营服务器，不存储用户消息，甚至不验证用户身份。它只是一个轻量客户端，连接到全球数百个公开、自愿运行的中继服务器（relays），通过私钥签名发布加密消息，并订阅他人广播的事件。它的核心逻辑完全运行在用户设备上，数据流经第三方中继，但中继本身无权解密、编辑或删除内容——除非主动选择不转发。
 这种架构让 Damus 成为首个在主流移动平台大规模落地的、真正意义上“抗审查”的社交客户端。而它的下架，恰恰印证了其设计目标：不是规避审查，而是让审查在技术上变得低效、昂贵且不可持续。
 本文将深入拆解 nostr 协议的本质机制，厘清它与传统中心化社交平台（如微博、Twitter/X）、乃至其他去中心化方案（如 Mastodon、ActivityPub）的根本差异；我们将逐层剖析其密码学基础、事件模型、中继协作逻辑、客户端行为规范；并通过可运行的 Python 与 JavaScript 示例，亲手构建一个最小可行的发布-订阅流程；最后，我们将直面最尖锐的问题：nostr 真的无法被审查吗？它的“抗审查性”是否存在边界？当国家力量、商业平台、网络基础设施与协议层发生碰撞时，技术理想主义能否守住底线？这场关于“谁控制消息、谁定义真相、谁承担后果”的博弈，远未结束——它刚刚进入第一回合。
 本解读不预设立场，但坚持一个前提：理解技术，是参与公共讨论的第一步。只有看清协议如何工作，我们才能理性判断——它究竟在抵抗什么，又可能纵容什么。
- 一、协议溯源：nostr 不是“另一个 Twitter”，而是一张签名消息的广播网 要理解 nostr 的颠覆性，必须先放下“社交网络”的旧有范式。它既不是微博那样的信息流平台，也不是微信那样的熟人关系链工具，更不是 Mastodon 那样基于服务器联邦的分布式微博客系统。nostr 的原始定位极为朴素：一个极简的、基于公钥密码学的、不可篡改的消息广播协议。
+一、协议溯源：nostr 不是“另一个 Twitter”，而是一张签名消息的广播网 要理解 nostr 的颠覆性，必须先放下“社交网络”的旧有范式。它既不是微博那样的信息流平台，也不是微信那样的熟人关系链工具，更不是 Mastodon 那样基于服务器联邦的分布式微博客系统。nostr 的原始定位极为朴素：一个极简的、基于公钥密码学的、不可篡改的消息广播协议。
 它的诞生背景极具象征意义：2020 年底，Twitter 创始人 Jack Dorsey 在推特上发起一项实验——“如果我们要重建一个开放的社交网络，它应该有多小？” 他提出一个核心思想：身份即公钥，消息即签名，分发靠中继，验证靠数学。这一想法由开发者 Globo 迅速实现为一份仅 300 行的原始规范草案，随后演变为今日的 nostr-protocol 开源标准。
 1.1 核心哲学：三原则定义协议边界 nostr 严格遵循三条设计铁律，它们共同划定了协议的能力边界与安全假设：
-  身份即公钥（Identity is Public Key）
-用户没有用户名、邮箱、手机号或任何中心化注册凭证。唯一标识是一个 32 字节的比特币风格 Secp256k1 公钥（以 npub 编码为 Base32 字符串）。私钥永远离线保存于用户设备，所有操作均由私钥签名完成。这意味着：创建账户零成本、零信任、零依赖；注销账户即销毁私钥——彻底、不可逆、无需通知任何人。</description>
-    </item>
-    <item>
-      <title>[SkillHub 爆款] ydc-openai-agent-sdk-integration：解决多端智能体协同难、MCP 协议接入门槛高问题，首周集成效率提升 3.2 倍</title>
-      <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-13-skillhub-ydc-openai-agent-sdk-integration/</link>
-      <pubDate>Fri, 13 Mar 2026 16:44:59 +0800</pubDate>
-      <guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-13-skillhub-ydc-openai-agent-sdk-integration/</guid>
-      <description>深度解析 ydc-openai-agent-sdk-integration 1.0.0 —— 专为 You.com MCP（Model Control Protocol）服务器定制的 OpenAI Agents SDK 无缝桥接方案。本文涵盖协议对齐原理、零配置代理层设计、生产级错误熔断机制、全链路可观测性埋点，并提供 7 个可直接运行的实战案例（含本地调试、云函数部署、流式 UI 集成、多工具编</description>
-    </item>
-    <item>
-      <title>[SkillHub 爆款] jisu-baiduai：解决企业级智能搜索接入门槛高、响应延迟大、语义理解弱三大痛点，实测QPS提升3.8倍，首屏平均响应降至217ms</title>
-      <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-12-skillhub-jisu-baiduai/</link>
-      <pubDate>Thu, 12 Mar 2026 17:11:55 +0800</pubDate>
-      <guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-12-skillhub-jisu-baiduai/</guid>
-      <description>jisu-baiduai 是 SkillHub 平台上首个深度集成百度文心一言大模型与百度智能搜索（Baidu Intelligent Search）底层能力的轻量级 SDK。本文从零构建完整技术链路，涵盖认证鉴权、意图识别、多模态结果融合、缓存策略、错误熔断、性能压测及生产部署全生命周期，含 27 个可运行代码示例、13 张架构图与性能对比表、5 类典型业务场景实战（电商商品搜索、政务知识问答、</description>
-    </item>
-  </channel>
-</rss>
+身份即公钥（Identity is Public Key）
+用户没有用户名、邮箱、手机号或任何中心化注册凭证。唯一标识是一个 32 字节的比特币风格 Secp256k1 公钥（以 npub 编码为 Base32 字符串）。私钥永远离线保存于用户设备，所有操作均由私钥签名完成。这意味着：创建账户零成本、零信任、零依赖；注销账户即销毁私钥——彻底、不可逆、无需通知任何人。</description></item><item><title>[SkillHub 爆款] ydc-openai-agent-sdk-integration：解决多端智能体协同难、MCP 协议接入门槛高问题，首周集成效率提升 3.2 倍</title><link>https://ape902.github.io/laoguo.github.io/posts/2026-03-13-skillhub-ydc-openai-agent-sdk-integration/</link><pubDate>Fri, 13 Mar 2026 16:44:59 +0800</pubDate><guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-13-skillhub-ydc-openai-agent-sdk-integration/</guid><description>深度解析 ydc-openai-agent-sdk-integration 1.0.0 —— 专为 You.com MCP（Model Control Protocol）服务器定制的 OpenAI Agents SDK 无缝桥接方案。本文涵盖协议对齐原理、零配置代理层设计、生产级错误熔断机制、全链路可观测性埋点，并提供 7 个可直接运行的实战案例（含本地调试、云函数部署、流式 UI 集成、多工具编</description></item><item><title>[SkillHub 爆款] jisu-baiduai：解决企业级智能搜索接入门槛高、响应延迟大、语义理解弱三大痛点，实测QPS提升3.8倍，首屏平均响应降至217ms</title><link>https://ape902.github.io/laoguo.github.io/posts/2026-03-12-skillhub-jisu-baiduai/</link><pubDate>Thu, 12 Mar 2026 17:11:55 +0800</pubDate><guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-12-skillhub-jisu-baiduai/</guid><description>jisu-baiduai 是 SkillHub 平台上首个深度集成百度文心一言大模型与百度智能搜索（Baidu Intelligent Search）底层能力的轻量级 SDK。本文从零构建完整技术链路，涵盖认证鉴权、意图识别、多模态结果融合、缓存策略、错误熔断、性能压测及生产部署全生命周期，含 27 个可运行代码示例、13 张架构图与性能对比表、5 类典型业务场景实战（电商商品搜索、政务知识问答、</description></item></channel></rss>
