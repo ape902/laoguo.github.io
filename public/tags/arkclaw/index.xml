@@ -6,17 +6,8 @@
     <description>Recent content in ArkClaw on 老郭的技术笔记</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 15 Mar 2026 04:28:50 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 12 Mar 2026 22:03:29 +0800</lastBuildDate>
     <atom:link href="https://ape902.github.io/laoguo.github.io/tags/arkclaw/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>技术文章</title>
-      <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-15-tech-article/</link>
-      <pubDate>Sun, 15 Mar 2026 04:28:50 +0800</pubDate>
-      <guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-15-tech-article/</guid>
-      <description>零安装的&amp;quot;云养虾&amp;quot;：ArkClaw 使用指南——一场面向开发者的无服务器交互范式革命 一、引言：当“龙虾”不再需要水族箱——从 OpenClaw 到 ArkClaw 的范式跃迁 大家这两天，有没有被“龙虾”（OpenClaw）刷屏？不是海鲜市场的新品，而是开源社区悄然掀起的一场静默风暴：一个代号为 OpenClaw 的实验性项目，在 GitHub 上以不到 72 小时的时间收获了 4200+ Star，其核心主张直击当代前端与 AI 工程师的集体痛点——“为什么每次跑一个 AI 工具，都要先 pip install、npm install、docker pull、kubectl apply……最后还卡在 CUDA 版本不兼容？”
-然而，真正引爆技术圈讨论的，并非 OpenClaw 本身，而是它在发布一周后衍生出的轻量级孪生体：ArkClaw。阮一峰老师在其博客《零安装的&amp;quot;云养虾&amp;quot;：ArkClaw 使用指南》中精准点题：“OpenClaw 是一条需要精心布设水族箱、调节 pH 值、配备循环泵的活体龙虾；而 ArkClaw，则是一只被封装进真空氮气袋、扫码即食、开袋即活的‘云养虾’。” 这个比喻看似戏谑，实则凝练地揭示了二者本质差异：OpenClaw 是一套完整的本地可扩展 AI 框架（基于 Rust + WebAssembly + Tokio），强调可控性与定制深度；而 ArkClaw 则是其官方认证的「极简分发层」——它不提供训练能力、不暴露模型权重、不依赖任何后端服务，仅通过单个 HTML 文件 + 内嵌 WASM 模块 + 浏览器 IndexedDB 缓存，即可完成端到端的 RAG（检索增强生成）推理闭环。
-这不是“PWA 化的 ChatGPT”，也不是“Next.js 封装的 LangChain”。ArkClaw 的根本创新在于：它把“安装”这个动作，从软件生命周期中彻底抹除，转而将“执行环境”压缩为浏览器引擎本身，把“部署”降维成一次 HTTP GET 请求，把“运维”消解为用户点击刷新键的瞬时行为。 它不与 Node.js 竞争，也不挑战 Kubernetes，它只是安静地躺在 https://cdn.</description>
-    </item>
     <item>
       <title>技术文章</title>
       <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-12-tech-article/</link>

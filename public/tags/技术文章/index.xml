@@ -6,8 +6,22 @@
     <description>Recent content in 技术文章 on 老郭的技术笔记</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 13 Mar 2026 16:44:59 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 15 Mar 2026 08:29:00 +0800</lastBuildDate>
     <atom:link href="https://ape902.github.io/laoguo.github.io/tags/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>是微服务架构不香还是云不香？</title>
+      <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-15-tech-article/</link>
+      <pubDate>Sun, 15 Mar 2026 08:29:00 +0800</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-15-tech-article/</guid>
+      <description>是微服务架构不香还是云不香？——从 Prime Video 技术回迁看现代分布式系统演进的深层逻辑 引言：一场被误读的“技术倒退”，实为架构理性的回归 2023年3月22日，Amazon Prime Video 团队在官方技术博客发布了一篇题为《Scaling Video Monitoring for Prime Video at Scale》的文章（中文可译为《规模化 Prime Video 的音视频监控服务》），迅速在中文技术社区引发广泛讨论。酷壳（CoolShell）于同年4月转载并冠以标题《是微服务架构不香还是云不香？》，将这场内部架构调整升维为对整个云原生范式的集体叩问。一时间，“微服务已死”“云原生过热”“Serverless 不实用”等论调甚嚣尘上。
+但若我们拨开情绪化标题的迷雾，深入原文细节与工程上下文，会发现：Prime Video 并未抛弃微服务，也未否定云平台的价值；他们所做的，是一次高度克制、数据驱动、面向真实业务负载的技术重构——将原本部署在 AWS ECS 上、由 150+ 个细粒度微服务组成的音视频质量监控系统，逐步收敛为少数几个高内聚、低耦合、强状态感知的“宏服务”（Macro-Service），并大量采用 EC2 实例托管，辅以自研轻量级服务网格与指标采集代理。
+这不是倒退，而是进化；不是否定，而是校准。它揭示了一个被长期忽视的事实：架构范式没有银弹，只有适配。当监控系统需要毫秒级端到端延迟、亚秒级故障定位、跨数千节点的实时流式聚合，以及对音视频编解码器底层指标（如 PTS/DTS 偏移、QP 值分布、帧丢弃率）的深度感知时，通用型服务发现、标准 HTTP 中间件链、统一 API 网关等“云原生标配”，反而成为可观测性与性能的瓶颈。
+本文将基于 Prime Video 博客原文、AWS 官方文档、CNCF 架构白皮书及一线团队访谈资料，展开一场深度技术复盘。我们将逐层拆解其监控系统演进路径，剖析微服务粒度失控的典型症状，量化云基础设施抽象层带来的隐性开销，并通过可运行的代码示例，重建其关键组件——包括自研轻量服务注册中心、基于 eBPF 的音视频流指标探针、多级缓存协同的告警决策引擎。最终，我们将回归本质：架构决策的终极标尺，从来不是“是否用了 Kubernetes”，而是“能否在每毫秒、每字节、每条告警中，精准承载业务的真实诉求”。
+这不仅是一次对 Prime Video 的解读，更是对中国广大中大型企业技术决策者的一次清醒提醒：当我们在 PPT 上画出十二边形微服务拓扑图时，请先问一句——这张图，能听懂用户卡顿那一刻的无声呐喊吗？
+本节完。
+第一节：从“150+ 微服务”到“3 个宏服务”——Prime Video 监控系统的三次架构跃迁 要理解 Prime Video 的这次重构，必须回到其监控系统诞生的历史现场。该系统并非从零设计，而是伴随 Prime Video 全球化扩张而持续演化的产物。根据其博客披露的时间线与架构图，其演进可分为三个明确阶段：
+阶段一：单体监控服务（2017–2019） 最初，Prime Video 仅需覆盖北美地区有限 CDN 节点与设备类型。团队采用 Java Spring Boot 构建单一后端服务，集成 FFmpeg 库进行本地音视频分析，通过定时拉取 CDN 日志完成质量统计。所有逻辑打包为一个 JAR，在 EC2 实例上运行，前端使用 React 渲染 Dashboard。</description>
+    </item>
     <item>
       <title>[SkillHub 爆款] ydc-openai-agent-sdk-integration：解决多端智能体协同难、MCP 协议接入门槛高问题，首周集成效率提升 3.2 倍</title>
       <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-13-skillhub-ydc-openai-agent-sdk-integration/</link>

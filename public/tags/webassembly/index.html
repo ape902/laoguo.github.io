@@ -151,20 +151,6 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>零安装的&#34;云养虾&#34;：ArkClaw 使用指南——一场面向开发者的无服务器交互范式革命 一、引言：当“龙虾”不再需要水族箱——从 OpenClaw 到 ArkClaw 的范式跃迁 大家这两天，有没有被“龙虾”（OpenClaw）刷屏？不是海鲜市场的新品，而是开源社区悄然掀起的一场静默风暴：一个代号为 OpenClaw 的实验性项目，在 GitHub 上以不到 72 小时的时间收获了 4200&#43; Star，其核心主张直击当代前端与 AI 工程师的集体痛点——“为什么每次跑一个 AI 工具，都要先 pip install、npm install、docker pull、kubectl apply……最后还卡在 CUDA 版本不兼容？”
-然而，真正引爆技术圈讨论的，并非 OpenClaw 本身，而是它在发布一周后衍生出的轻量级孪生体：ArkClaw。阮一峰老师在其博客《零安装的&#34;云养虾&#34;：ArkClaw 使用指南》中精准点题：“OpenClaw 是一条需要精心布设水族箱、调节 pH 值、配备循环泵的活体龙虾；而 ArkClaw，则是一只被封装进真空氮气袋、扫码即食、开袋即活的‘云养虾’。” 这个比喻看似戏谑，实则凝练地揭示了二者本质差异：OpenClaw 是一套完整的本地可扩展 AI 框架（基于 Rust &#43; WebAssembly &#43; Tokio），强调可控性与定制深度；而 ArkClaw 则是其官方认证的「极简分发层」——它不提供训练能力、不暴露模型权重、不依赖任何后端服务，仅通过单个 HTML 文件 &#43; 内嵌 WASM 模块 &#43; 浏览器 IndexedDB 缓存，即可完成端到端的 RAG（检索增强生成）推理闭环。
-这不是“PWA 化的 ChatGPT”，也不是“Next.js 封装的 LangChain”。ArkClaw 的根本创新在于：它把“安装”这个动作，从软件生命周期中彻底抹除，转而将“执行环境”压缩为浏览器引擎本身，把“部署”降维成一次 HTTP GET 请求，把“运维”消解为用户点击刷新键的瞬时行为。 它不与 Node.js 竞争，也不挑战 Kubernetes，它只是安静地躺在 https://cdn....</p>
-  </div>
-  <footer class="entry-footer"><span title='2026-03-15 04:28:50 +0800 CST'>March 15, 2026</span>&nbsp;·&nbsp;<span>10 min</span>&nbsp;·&nbsp;<span>2080 words</span>&nbsp;·&nbsp;<span>千吉</span></footer>
-  <a class="entry-link" aria-label="post link to 技术文章" href="https://ape902.github.io/laoguo.github.io/posts/2026-03-15-tech-article/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">技术文章
-    </h2>
-  </header>
-  <div class="entry-content">
     <p>零安装的&#34;云养虾&#34;：ArkClaw 使用指南 —— 一场面向未来的函数即服务革命  注：本文所称“云养虾”，并非字面意义的水产养殖，而是对 ArkClaw（音近“阿克爪”，亦谐音“OpenClaw”）这一新型无服务器执行环境的形象化表达。“虾”取其轻盈、敏捷、可集群、耐高并发之特性；“云养”则强调其无需本地安装、不依赖宿主环境、按需拉取、即启即用的云原生基因。它不是容器，不是虚拟机，甚至不是传统意义上的 runtime——它是 WebAssembly 在服务端落地的成熟范式结晶。
  一、破题：为什么“龙虾”突然刷屏？一场被低估的运行时范式迁移 2026 年 3 月上旬，技术圈悄然掀起一股名为“龙虾”的涟漪。起初只是零星 GitHub Issue 中一句调侃：“我的函数跑在虾壳里，连 glibc 都没见过”；随后，阮一峰老师在其博客中以《零安装的&#34;云养虾&#34;：ArkClaw 使用指南》为题发布长文，引发全网转发与深度讨论。短短 72 小时内，ArkClaw GitHub 仓库 star 数突破 12,400，Discord 社区成员激增至 8,900&#43;，多个头部云厂商内部已启动 ArkClaw 兼容层预研项目。
 但问题来了：我们已有 AWS Lambda、Cloudflare Workers、Vercel Edge Functions、Deno Deploy……为何一个新 runtime 能引发如此规模的集体关注？答案不在功能叠加，而在范式位移——ArkClaw 不是又一个 FaaS（函数即服务）平台，而是一次对“函数执行环境”底层契约的重新定义。
