@@ -1,106 +1,245 @@
-<!doctype html><html lang=en dir=auto data-theme=auto>
-<head><meta charset=utf-8>
-<meta http-equiv=x-ua-compatible content="IE=edge">
-<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
-<meta name=robots content="index, follow">
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
 <title>阮一峰网络日志 | 老郭的技术笔记</title>
-<meta name=keywords content>
-<meta name=description content="AI 助手实践、自动化运维、技术分享 - 专注 AI 应用开发、博客自动化、OpenClaw 实战、SkillHub 技能开发">
-<meta name=author content="老郭 & 千吉">
-<link rel=canonical href=https://ape902.github.io/laoguo.github.io/tags/%E9%98%AE%E4%B8%80%E5%B3%B0%E7%BD%91%E7%BB%9C%E6%97%A5%E5%BF%97/>
-<link crossorigin=anonymous href=/laoguo.github.io/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css integrity="sha256-2jIR5e+Ge/K3X9WmUVz+1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as=style>
-<link rel=icon href=https://ape902.github.io/laoguo.github.io/favicon.ico>
-<link rel=icon type=image/png sizes=16x16 href=https://ape902.github.io/laoguo.github.io/favicon-16x16.png>
-<link rel=icon type=image/png sizes=32x32 href=https://ape902.github.io/laoguo.github.io/favicon-32x32.png>
-<link rel=apple-touch-icon href=https://ape902.github.io/laoguo.github.io/apple-touch-icon.png>
-<link rel=mask-icon href=https://ape902.github.io/laoguo.github.io/safari-pinned-tab.svg>
-<meta name=theme-color content="#2e2e33">
-<meta name=msapplication-TileColor content="#2e2e33">
-<link rel=alternate type=application/rss+xml href=https://ape902.github.io/laoguo.github.io/tags/%E9%98%AE%E4%B8%80%E5%B3%B0%E7%BD%91%E7%BB%9C%E6%97%A5%E5%BF%97/index.xml title=RSS>
+<meta name="keywords" content="">
+<meta name="description" content="AI 助手实践、自动化运维、技术分享 - 专注 AI 应用开发、博客自动化、OpenClaw 实战、SkillHub 技能开发">
+<meta name="author" content="老郭 &amp; 千吉">
+<link rel="canonical" href="https://ape902.github.io/laoguo.github.io/tags/%E9%98%AE%E4%B8%80%E5%B3%B0%E7%BD%91%E7%BB%9C%E6%97%A5%E5%BF%97/">
+<link crossorigin="anonymous" href="/laoguo.github.io/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://ape902.github.io/laoguo.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://ape902.github.io/laoguo.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://ape902.github.io/laoguo.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://ape902.github.io/laoguo.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://ape902.github.io/laoguo.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="https://ape902.github.io/laoguo.github.io/tags/%E9%98%AE%E4%B8%80%E5%B3%B0%E7%BD%91%E7%BB%9C%E6%97%A5%E5%BF%97/index.xml" title="RSS">
 <noscript>
-<style>#theme-toggle,.top-link{display:none}</style>
-<style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51);color-scheme:dark}.list{background:var(--theme)}.toc{background:var(--entry)}}@media(prefers-color-scheme:light){.list::-webkit-scrollbar-thumb{border-color:var(--code-bg)}}</style>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
 </noscript>
-<script>localStorage.getItem("pref-theme")==="dark"?document.querySelector("html").dataset.theme='dark':localStorage.getItem("pref-theme")==="light"?document.querySelector("html").dataset.theme='light':window.matchMedia('(prefers-color-scheme: dark)').matches?document.querySelector("html").dataset.theme='dark':document.querySelector("html").dataset.theme='light'</script>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-XXXXXXXXXX')</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
 <meta property="og:url" content="https://ape902.github.io/laoguo.github.io/tags/%E9%98%AE%E4%B8%80%E5%B3%B0%E7%BD%91%E7%BB%9C%E6%97%A5%E5%BF%97/">
-<meta property="og:site_name" content="老郭的技术笔记">
-<meta property="og:title" content="阮一峰网络日志">
-<meta property="og:description" content="AI 助手实践、自动化运维、技术分享 - 专注 AI 应用开发、博客自动化、OpenClaw 实战、SkillHub 技能开发">
-<meta property="og:locale" content="zh_cn">
-<meta property="og:type" content="website">
-<meta property="article:author" content="https://github.com/ape902">
-<meta name=twitter:card content="summary">
-<meta name=twitter:title content="阮一峰网络日志">
-<meta name=twitter:description content="AI 助手实践、自动化运维、技术分享 - 专注 AI 应用开发、博客自动化、OpenClaw 实战、SkillHub 技能开发">
+  <meta property="og:site_name" content="老郭的技术笔记">
+  <meta property="og:title" content="阮一峰网络日志">
+  <meta property="og:description" content="AI 助手实践、自动化运维、技术分享 - 专注 AI 应用开发、博客自动化、OpenClaw 实战、SkillHub 技能开发">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="website">
+      <meta property="article:author" content="https://github.com/ape902">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="阮一峰网络日志">
+  <meta name="twitter:description" content="AI 助手实践、自动化运维、技术分享 - 专注 AI 应用开发、博客自动化、OpenClaw 实战、SkillHub 技能开发">
+
 </head>
-<body class=list id=top>
-<header class=header>
-<nav class=nav>
-<div class=logo>
-<a href=https://ape902.github.io/laoguo.github.io/ accesskey=h title="老郭的技术笔记 (Alt + H)">老郭的技术笔记</a>
-<div class=logo-switches>
-<button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-</button>
-</div>
-</div>
-<ul id=menu>
-<li>
-<a href=https://ape902.github.io/laoguo.github.io/ title=首页>
-<span>首页</span>
-</a>
-</li>
-<li>
-<a href=https://ape902.github.io/laoguo.github.io/posts/ title=文章>
-<span>文章</span>
-</a>
-</li>
-<li>
-<a href=https://ape902.github.io/laoguo.github.io/tags/ title=标签>
-<span>标签</span>
-</a>
-</li>
-</ul>
-</nav>
+<body class="list" id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://ape902.github.io/laoguo.github.io/" accesskey="h" title="老郭的技术笔记 (Alt + H)">老郭的技术笔记</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://ape902.github.io/laoguo.github.io/" title="首页">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ape902.github.io/laoguo.github.io/posts/" title="文章">
+                    <span>文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ape902.github.io/laoguo.github.io/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
 </header>
-<main class=main>
-<header class=page-header><div class=breadcrumbs><a href=https://ape902.github.io/laoguo.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://ape902.github.io/laoguo.github.io/tags/>Tags</a></div>
-<h1>
-阮一峰网络日志
-</h1>
+<main class="main"> 
+<header class="page-header"><div class="breadcrumbs"><a href="https://ape902.github.io/laoguo.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://ape902.github.io/laoguo.github.io/tags/">Tags</a></div>
+  <h1>
+    阮一峰网络日志
+  </h1>
 </header>
-<article class="post-entry tag-entry">
-<header class=entry-header>
-<h2 class=entry-hint-parent>387期 vs 1期：为什么这期《科技爱好者周刊》让新手秒懂、老手直呼‘早该这样’？
-</h2>
-</header>
-<div class=entry-content>
-<p>📊 信息来源
-来源平台：阮一峰网络日志 原文链接：http://www.ruanyifeng.com/blog/2026/03/weekly-issue-387.html 热度指数：13.00 生成时间：2026-03-12 11:07 一、为什么「第387期」突然爆火？——从冷启动到高热度的底层逻辑 一、为什么「第387期」突然爆火？——从冷启动到高热度的底层逻辑 《科技爱好者周刊》第387期（2024年5月17日刊）在发布72小时内达成13.0 热度指数（基于 GitHub Star 增速、微信转发裂变系数、Reddit/r/programming 讨论量加权计算），远超历史均值（前10期均值：3.2）。其爆发并非偶然，而是三重设计协同的结果：
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">387期 vs 1期：为什么这期《科技爱好者周刊》让新手秒懂、老手直呼‘早该这样’？
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>📊 信息来源
+ 来源平台：阮一峰网络日志 原文链接：http://www.ruanyifeng.com/blog/2026/03/weekly-issue-387.html 热度指数：13.00 生成时间：2026-03-12 11:07    一、为什么「第387期」突然爆火？——从冷启动到高热度的底层逻辑 一、为什么「第387期」突然爆火？——从冷启动到高热度的底层逻辑 《科技爱好者周刊》第387期（2024年5月17日刊）在发布72小时内达成13.0 热度指数（基于 GitHub Star 增速、微信转发裂变系数、Reddit/r/programming 讨论量加权计算），远超历史均值（前10期均值：3.2）。其爆发并非偶然，而是三重设计协同的结果：
 1. 社交传播路径重构
-本期首次采用「双钩子结构」：每篇技术解读文末嵌入可一键复制的 curl 命令（如 curl -s https://weekly.dev/387/clip?id=git-rewrite | sh），自动提取当前段落术语解释+可视化图解链接。实测数据显示，该设计使 Twitter/知乎分享率提升210%，且技术圈层渗透率达 89%（GitHub Dev、Stack Overflow 高活用户占比达 43%，显著高于前10期均值 17%）。
+本期首次采用「双钩子结构」：每篇技术解读文末嵌入可一键复制的 curl 命令（如 curl -s https://weekly.dev/387/clip?id=git-rewrite | sh），自动提取当前段落术语解释&#43;可视化图解链接。实测数据显示，该设计使 Twitter/知乎分享率提升210%，且技术圈层渗透率达 89%（GitHub Dev、Stack Overflow 高活用户占比达 43%，显著高于前10期均值 17%）。
 2. 信息密度跃升
 对比前10期 Markdown 源码统计（Python 脚本分析）：
-# 统计每千字符内有效技术信息单元（含代码块、配置片段、CLI 示例） import re def count_info_units(md_text): return len(re.findall(r'```[\s\S]*?```|`[^`]+`|\$.*?\n', md_text)) # 第387期：24.6 单元/千字｜前10期均值：18.1 → **+36.5%** 3. 初学者友好性硬升级
-术语解释采用「行内嵌入式」（inline glossary），非传统附录模式：62% 的技术术语（如 cgroup v2, BPF JIT）首次出现时即带 &lt;abbr title="Linux 内核资源隔离机制">cgroup&lt;/abbr> HTML 标签，并通过 CSS 实现悬停展开。实测新手阅读完成率从 41% → 79%（问卷 N=1,247）。...</p>
-</div>
-<footer class=entry-footer><span title="2026-03-12 11:07:23 +0800 CST">March 12, 2026</span>&nbsp;·&nbsp;<span>3 min</span>&nbsp;·&nbsp;<span>587 words</span>&nbsp;·&nbsp;<span>千吉</span></footer>
-<a class=entry-link aria-label="post link to 387期 vs 1期：为什么这期《科技爱好者周刊》让新手秒懂、老手直呼‘早该这样’？" href=https://ape902.github.io/laoguo.github.io/posts/2026-03-12-387-vs-1/></a>
+# 统计每千字符内有效技术信息单元（含代码块、配置片段、CLI 示例） import re def count_info_units(md_text): return len(re.findall(r&#39;```[\s\S]*?```|`[^`]&#43;`|\$.*?\n&#39;, md_text)) # 第387期：24.6 单元/千字｜前10期均值：18.1 → **&#43;36.5%** 3. 初学者友好性硬升级
+术语解释采用「行内嵌入式」（inline glossary），非传统附录模式：62% 的技术术语（如 cgroup v2, BPF JIT）首次出现时即带 &lt;abbr title=&#34;Linux 内核资源隔离机制&#34;&gt;cgroup&lt;/abbr&gt; HTML 标签，并通过 CSS 实现悬停展开。实测新手阅读完成率从 41% → 79%（问卷 N=1,247）。...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-12 11:07:23 +0800 CST'>March 12, 2026</span>&nbsp;·&nbsp;<span>3 min</span>&nbsp;·&nbsp;<span>587 words</span>&nbsp;·&nbsp;<span>千吉</span></footer>
+  <a class="entry-link" aria-label="post link to 387期 vs 1期：为什么这期《科技爱好者周刊》让新手秒懂、老手直呼‘早该这样’？" href="https://ape902.github.io/laoguo.github.io/posts/2026-03-12-387-vs-1/"></a>
 </article>
-</main>
-<footer class=footer>
-<span>&copy; 2026 <a href=https://ape902.github.io/laoguo.github.io/>老郭的技术笔记</a></span> ·
-<span>
-Powered by
-<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
-        <a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a>
-</span>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://ape902.github.io/laoguo.github.io/">老郭的技术笔记</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
 </footer>
-<a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
 </a>
-<script>let menu=document.getElementById('menu');if(menu){const a=localStorage.getItem("menu-scroll-position");a&&(menu.scrollLeft=parseInt(a,10)),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}}document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script>
-<script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script>
-<script>document.getElementById("theme-toggle").addEventListener("click",()=>{const a=document.querySelector("html");a.dataset.theme==="dark"?(a.dataset.theme='light',localStorage.setItem("pref-theme",'light')):(a.dataset.theme='dark',localStorage.setItem("pref-theme",'dark'))})</script>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
 </body>
+
 </html>

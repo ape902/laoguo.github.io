@@ -1,1 +1,54 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>juejin on 老郭的技术笔记</title><link>https://ape902.github.io/laoguo.github.io/tags/juejin/</link><description>Recent content in juejin on 老郭的技术笔记</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Thu, 12 Mar 2026 08:01:28 +0800</lastBuildDate><atom:link href="https://ape902.github.io/laoguo.github.io/tags/juejin/index.xml" rel="self" type="application/rss+xml"/><item><title>5 个被严重低估的 JavaScript 原生 API：为什么你还在用 Lodash？</title><link>https://ape902.github.io/laoguo.github.io/posts/2026-03-12-5-javascript-api-lodash/</link><pubDate>Thu, 12 Mar 2026 08:01:28 +0800</pubDate><guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-12-5-javascript-api-lodash/</guid><description>...</description></item><item><title>5 个被严重低估的 CSS 技巧：为什么你还在用 JS 实现 hover 动画？</title><link>https://ape902.github.io/laoguo.github.io/posts/2026-03-12-5-css-js-hover/</link><pubDate>Thu, 12 Mar 2026 06:01:41 +0800</pubDate><guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-12-5-css-js-hover/</guid><description>...</description></item><item><title>5 个被高估的前端‘新宠’？React Server Components vs Next.js App Router：初学者该学哪个？</title><link>https://ape902.github.io/laoguo.github.io/posts/2026-03-12-5-react-server-components-vs-next-js-app/</link><pubDate>Thu, 12 Mar 2026 04:02:13 +0800</pubDate><guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-12-5-react-server-components-vs-next-js-app/</guid><description>...</description></item><item><title>5 个被高估的前端‘新宠’？React Server Components vs Next.js App Router：初学者该学哪个？</title><link>https://ape902.github.io/laoguo.github.io/posts/2026-03-11-5-react-server-components-vs-next-js-app/</link><pubDate>Wed, 11 Mar 2026 22:01:54 +0800</pubDate><guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-11-5-react-server-components-vs-next-js-app/</guid><description>...</description></item><item><title>5 个被高估的前端‘新宠’？React Server Components vs. SSG/SSR/CSR，初学者真该立刻上手吗？</title><link>https://ape902.github.io/laoguo.github.io/posts/2026-03-11-5-react-server-components-vs-ssg-ssr-csr/</link><pubDate>Wed, 11 Mar 2026 20:02:05 +0800</pubDate><guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-11-5-react-server-components-vs-ssg-ssr-csr/</guid><description>...</description></item><item><title>3 种主流前端状态管理方案对比：Redux、Zustand 与 Jotai，谁才是 2024 年轻应用的最优解？</title><link>https://ape902.github.io/laoguo.github.io/posts/2026-03-11-3-redux-zustand-jotai-2024/</link><pubDate>Wed, 11 Mar 2026 18:01:47 +0800</pubDate><guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-11-3-redux-zustand-jotai-2024/</guid><description>...</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>juejin on 老郭的技术笔记</title>
+    <link>https://ape902.github.io/laoguo.github.io/tags/juejin/</link>
+    <description>Recent content in juejin on 老郭的技术笔记</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 12 Mar 2026 08:01:28 +0800</lastBuildDate>
+    <atom:link href="https://ape902.github.io/laoguo.github.io/tags/juejin/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>5 个被严重低估的 JavaScript 原生 API：为什么你还在用 Lodash？</title>
+      <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-12-5-javascript-api-lodash/</link>
+      <pubDate>Thu, 12 Mar 2026 08:01:28 +0800</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-12-5-javascript-api-lodash/</guid>
+      <description>...</description>
+    </item>
+    <item>
+      <title>5 个被严重低估的 CSS 技巧：为什么你还在用 JS 实现 hover 动画？</title>
+      <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-12-5-css-js-hover/</link>
+      <pubDate>Thu, 12 Mar 2026 06:01:41 +0800</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-12-5-css-js-hover/</guid>
+      <description>...</description>
+    </item>
+    <item>
+      <title>5 个被高估的前端‘新宠’？React Server Components vs Next.js App Router：初学者该学哪个？</title>
+      <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-12-5-react-server-components-vs-next-js-app/</link>
+      <pubDate>Thu, 12 Mar 2026 04:02:13 +0800</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-12-5-react-server-components-vs-next-js-app/</guid>
+      <description>...</description>
+    </item>
+    <item>
+      <title>5 个被高估的前端‘新宠’？React Server Components vs Next.js App Router：初学者该学哪个？</title>
+      <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-11-5-react-server-components-vs-next-js-app/</link>
+      <pubDate>Wed, 11 Mar 2026 22:01:54 +0800</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-11-5-react-server-components-vs-next-js-app/</guid>
+      <description>...</description>
+    </item>
+    <item>
+      <title>5 个被高估的前端‘新宠’？React Server Components vs. SSG/SSR/CSR，初学者真该立刻上手吗？</title>
+      <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-11-5-react-server-components-vs-ssg-ssr-csr/</link>
+      <pubDate>Wed, 11 Mar 2026 20:02:05 +0800</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-11-5-react-server-components-vs-ssg-ssr-csr/</guid>
+      <description>...</description>
+    </item>
+    <item>
+      <title>3 种主流前端状态管理方案对比：Redux、Zustand 与 Jotai，谁才是 2024 年轻应用的最优解？</title>
+      <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-11-3-redux-zustand-jotai-2024/</link>
+      <pubDate>Wed, 11 Mar 2026 18:01:47 +0800</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-11-3-redux-zustand-jotai-2024/</guid>
+      <description>...</description>
+    </item>
+  </channel>
+</rss>

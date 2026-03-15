@@ -1,5 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>WASI on 老郭的技术笔记</title><link>https://ape902.github.io/laoguo.github.io/tags/wasi/</link><description>Recent content in WASI on 老郭的技术笔记</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Thu, 12 Mar 2026 22:03:29 +0800</lastBuildDate><atom:link href="https://ape902.github.io/laoguo.github.io/tags/wasi/index.xml" rel="self" type="application/rss+xml"/><item><title>技术文章</title><link>https://ape902.github.io/laoguo.github.io/posts/2026-03-12-tech-article/</link><pubDate>Thu, 12 Mar 2026 22:03:29 +0800</pubDate><guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-12-tech-article/</guid><description>零安装的&amp;quot;云养虾&amp;quot;：ArkClaw 使用指南 —— 一场面向未来的函数即服务革命 注：本文所称“云养虾”，并非字面意义的水产养殖，而是对 ArkClaw（音近“阿克爪”，亦谐音“OpenClaw”）这一新型无服务器执行环境的形象化表达。“虾”取其轻盈、敏捷、可集群、耐高并发之特性；“云养”则强调其无需本地安装、不依赖宿主环境、按需拉取、即启即用的云原生基因。它不是容器，不是虚拟机，甚至不是传统意义上的 runtime——它是 WebAssembly 在服务端落地的成熟范式结晶。
-一、破题：为什么“龙虾”突然刷屏？一场被低估的运行时范式迁移 2026 年 3 月上旬，技术圈悄然掀起一股名为“龙虾”的涟漪。起初只是零星 GitHub Issue 中一句调侃：“我的函数跑在虾壳里，连 glibc 都没见过”；随后，阮一峰老师在其博客中以《零安装的&amp;quot;云养虾&amp;quot;：ArkClaw 使用指南》为题发布长文，引发全网转发与深度讨论。短短 72 小时内，ArkClaw GitHub 仓库 star 数突破 12,400，Discord 社区成员激增至 8,900+，多个头部云厂商内部已启动 ArkClaw 兼容层预研项目。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>WASI on 老郭的技术笔记</title>
+    <link>https://ape902.github.io/laoguo.github.io/tags/wasi/</link>
+    <description>Recent content in WASI on 老郭的技术笔记</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 12 Mar 2026 22:03:29 +0800</lastBuildDate>
+    <atom:link href="https://ape902.github.io/laoguo.github.io/tags/wasi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>技术文章</title>
+      <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-12-tech-article/</link>
+      <pubDate>Thu, 12 Mar 2026 22:03:29 +0800</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-12-tech-article/</guid>
+      <description>零安装的&amp;quot;云养虾&amp;quot;：ArkClaw 使用指南 —— 一场面向未来的函数即服务革命  注：本文所称“云养虾”，并非字面意义的水产养殖，而是对 ArkClaw（音近“阿克爪”，亦谐音“OpenClaw”）这一新型无服务器执行环境的形象化表达。“虾”取其轻盈、敏捷、可集群、耐高并发之特性；“云养”则强调其无需本地安装、不依赖宿主环境、按需拉取、即启即用的云原生基因。它不是容器，不是虚拟机，甚至不是传统意义上的 runtime——它是 WebAssembly 在服务端落地的成熟范式结晶。
+ 一、破题：为什么“龙虾”突然刷屏？一场被低估的运行时范式迁移 2026 年 3 月上旬，技术圈悄然掀起一股名为“龙虾”的涟漪。起初只是零星 GitHub Issue 中一句调侃：“我的函数跑在虾壳里，连 glibc 都没见过”；随后，阮一峰老师在其博客中以《零安装的&amp;quot;云养虾&amp;quot;：ArkClaw 使用指南》为题发布长文，引发全网转发与深度讨论。短短 72 小时内，ArkClaw GitHub 仓库 star 数突破 12,400，Discord 社区成员激增至 8,900+，多个头部云厂商内部已启动 ArkClaw 兼容层预研项目。
 但问题来了：我们已有 AWS Lambda、Cloudflare Workers、Vercel Edge Functions、Deno Deploy……为何一个新 runtime 能引发如此规模的集体关注？答案不在功能叠加，而在范式位移——ArkClaw 不是又一个 FaaS（函数即服务）平台，而是一次对“函数执行环境”底层契约的重新定义。
 传统 FaaS 存在三个长期未解的隐性成本：
-语言绑定枷锁：Lambda 支持 Node.js/Python/Java 等，但每新增一门语言，需云厂商投入数月适配 SDK、调试沙箱、维护 ABI 兼容性。开发者若想用 Zig 或 Gleam，只能等待或自行 fork； 冷启动幻痛：即便采用容器镜像预热，Linux namespace + cgroups 初始化仍需 100–300ms；更致命的是，不同函数间无法共享 JIT 缓存、TLS 会话、连接池等运行时状态； 可信边界模糊：沙箱（如 Firecracker、gVisor）本质仍是 OS 层隔离，攻击面大；而 WASM 沙箱通过线性内存隔离 + 显式能力导入（capability-based security），将权限收敛至函数声明所需最小集。 ArkClaw 正是直击这三重痛点而生：它不提供语言 SDK，只暴露标准 WASI 接口；它不管理进程生命周期，只调度 wasm 字节码模块；它不预置任何运行时，所有依赖（包括 HTTP 客户端、JSON 解析器、加密库）均由开发者以 .</description></item></channel></rss>
+ 语言绑定枷锁：Lambda 支持 Node.js/Python/Java 等，但每新增一门语言，需云厂商投入数月适配 SDK、调试沙箱、维护 ABI 兼容性。开发者若想用 Zig 或 Gleam，只能等待或自行 fork； 冷启动幻痛：即便采用容器镜像预热，Linux namespace + cgroups 初始化仍需 100–300ms；更致命的是，不同函数间无法共享 JIT 缓存、TLS 会话、连接池等运行时状态； 可信边界模糊：沙箱（如 Firecracker、gVisor）本质仍是 OS 层隔离，攻击面大；而 WASM 沙箱通过线性内存隔离 + 显式能力导入（capability-based security），将权限收敛至函数声明所需最小集。  ArkClaw 正是直击这三重痛点而生：它不提供语言 SDK，只暴露标准 WASI 接口；它不管理进程生命周期，只调度 wasm 字节码模块；它不预置任何运行时，所有依赖（包括 HTTP 客户端、JSON 解析器、加密库）均由开发者以 .</description>
+    </item>
+  </channel>
+</rss>

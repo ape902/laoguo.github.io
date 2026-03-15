@@ -1,5 +1,37 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>云原生 on 老郭的技术笔记</title><link>https://ape902.github.io/laoguo.github.io/tags/%E4%BA%91%E5%8E%9F%E7%94%9F/</link><description>Recent content in 云原生 on 老郭的技术笔记</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Thu, 12 Mar 2026 22:03:29 +0800</lastBuildDate><atom:link href="https://ape902.github.io/laoguo.github.io/tags/%E4%BA%91%E5%8E%9F%E7%94%9F/index.xml" rel="self" type="application/rss+xml"/><item><title>技术文章</title><link>https://ape902.github.io/laoguo.github.io/posts/2026-03-12-tech-article/</link><pubDate>Thu, 12 Mar 2026 22:03:29 +0800</pubDate><guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-12-tech-article/</guid><description>零安装的&amp;quot;云养虾&amp;quot;：ArkClaw 使用指南 —— 一场面向未来的函数即服务革命 注：本文所称“云养虾”，并非字面意义的水产养殖，而是对 ArkClaw（音近“阿克爪”，亦谐音“OpenClaw”）这一新型无服务器执行环境的形象化表达。“虾”取其轻盈、敏捷、可集群、耐高并发之特性；“云养”则强调其无需本地安装、不依赖宿主环境、按需拉取、即启即用的云原生基因。它不是容器，不是虚拟机，甚至不是传统意义上的 runtime——它是 WebAssembly 在服务端落地的成熟范式结晶。
-一、破题：为什么“龙虾”突然刷屏？一场被低估的运行时范式迁移 2026 年 3 月上旬，技术圈悄然掀起一股名为“龙虾”的涟漪。起初只是零星 GitHub Issue 中一句调侃：“我的函数跑在虾壳里，连 glibc 都没见过”；随后，阮一峰老师在其博客中以《零安装的&amp;quot;云养虾&amp;quot;：ArkClaw 使用指南》为题发布长文，引发全网转发与深度讨论。短短 72 小时内，ArkClaw GitHub 仓库 star 数突破 12,400，Discord 社区成员激增至 8,900+，多个头部云厂商内部已启动 ArkClaw 兼容层预研项目。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>云原生 on 老郭的技术笔记</title>
+    <link>https://ape902.github.io/laoguo.github.io/tags/%E4%BA%91%E5%8E%9F%E7%94%9F/</link>
+    <description>Recent content in 云原生 on 老郭的技术笔记</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 16 Mar 2026 06:28:28 +0800</lastBuildDate>
+    <atom:link href="https://ape902.github.io/laoguo.github.io/tags/%E4%BA%91%E5%8E%9F%E7%94%9F/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>是微服务架构不香还是云不香？</title>
+      <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-16-tech-article/</link>
+      <pubDate>Mon, 16 Mar 2026 06:28:28 +0800</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-16-tech-article/</guid>
+      <description>是微服务架构不香还是云不香？——从 Prime Video 技术回撤看现代分布式系统的真实代价 引言：一场被低估的“架构反向演进”事件 2023年3月22日，Amazon Prime Video 团队在官方技术博客中发布了一篇题为《Scaling Prime Video’s Audio-Video Monitoring Service》（规模化 Prime Video 的音视频监控服务）的文章。表面看，这是一次常规的技术实践分享；但深入阅读后，技术圈迅速意识到：这并非一次简单的性能优化案例，而是一次罕见的、有明确数据支撑的大规模架构降级决策——他们将一个已运行多年的、高度解耦的微服务化监控系统，整体重构为单体服务（Monolith），并主动放弃部分云原生基础设施能力，转而采用更可控、更低延迟、更高一致性的混合部署模式。
+这一举动在当时引发巨大震动。毕竟，在过去十年间，“微服务 + 云”已被奉为互联网高可用系统的黄金组合：Spring Cloud、Istio、Kubernetes、AWS ECS/EKS 等技术栈构成了一套近乎宗教般的标准范式。开发者默认认为：服务越细粒度、部署越容器化、扩缩容越自动，系统就越“先进”。而 Prime Video 却用生产环境的真实数据指出：当业务复杂度、实时性要求与一致性边界达到临界点时，这套范式不仅不再“香”，反而成为性能瓶颈、运维负担与故障放大器的源头。
+本文将深度拆解这篇技术博客背后隐藏的架构哲学冲突，还原 Prime Video 团队所面临的真实约束条件（非理论假设），逐层剖析其技术决策背后的数学依据、可观测性困境、分布式事务成本与组织协同代价。我们不预设立场，不鼓吹“单体复兴”，也不否定微服务价值；而是以工程第一性原理为尺，丈量每一种架构选择在特定时空下的真实 ROI（投资回报率）。最终回答那个被反复误读的问题：不是微服务不香，也不是云不香，而是——当“香”的前提（如松耦合、异步通信、最终一致性）被业务现实击穿时，盲目坚持范式，才是最大的技术债务。
+ ✅ 关键认知前置：本文所有分析均基于 Prime Video 博客原文披露的 7 类核心指标（P99 延迟、跨服务调用链长度、SLO 违约率、告警误报率、部署频率、MTTR、配置漂移次数），以及其公开的 3 个关键重构阶段（Phase I–III）的量化对比数据。所有推论均有原文依据，杜绝主观臆断。
+  第一节：背景还原——Prime Video 监控系统的原始架构与崩溃临界点 要理解为何要“退”，必须先看清“进”得有多激进。Prime Video 的音视频监控服务（以下简称 AVM 服务）并非传统意义上的日志收集器，而是承担着实时质量评估（QoE）、异常检测、根因定位、SLA 自动补偿四大核心职责的智能中枢。它需在用户播放卡顿发生后的 200ms 内完成全链路诊断，并触发 CDN 缓存刷新或边缘节点重路由等动作。这种毫秒级闭环能力，决定了其架构无法容忍任何非必要延迟。
+1.1 原始微服务架构全景图（2020–2022） 该系统最初采用典型的“云原生微服务”设计：
+  服务分层：共 17 个独立服务，按功能域划分：
+ ingest-service：接收来自全球 200+ CDN 节点的 UDP 流式指标（带宽、丢包、Jitter） decoder-service：对原始二进制流进行协议解析（HLS/DASH/RTMP） qoe-calculator：计算 MOS（Mean Opinion Score）、Stall Ratio、Startup Time 等 QoE 指标 anomaly-detector：基于 LSTM 模型识别异常模式（如区域性卡顿突增） root-cause-analyzer：执行拓扑遍历与因果推理（依赖服务拓扑图 + 实时指标关联） remediation-engine：调用 AWS API 执行自动修复（如更新 Route 53 权重、触发 Lambda 函数） alert-service：对接 PagerDuty/SMS/Email，按 SLO 分级告警 其余 10 个为支撑服务：config-service、auth-service、metric-store（Prometheus Adapter）、trace-collector（Jaeger）、ui-backend、notification-queue（SQS）、audit-logger、backup-syncer、schema-registry（Avro）、feature-flag-manager    基础设施：</description>
+    </item>
+    <item>
+      <title>技术文章</title>
+      <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-12-tech-article/</link>
+      <pubDate>Thu, 12 Mar 2026 22:03:29 +0800</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-12-tech-article/</guid>
+      <description>零安装的&amp;quot;云养虾&amp;quot;：ArkClaw 使用指南 —— 一场面向未来的函数即服务革命  注：本文所称“云养虾”，并非字面意义的水产养殖，而是对 ArkClaw（音近“阿克爪”，亦谐音“OpenClaw”）这一新型无服务器执行环境的形象化表达。“虾”取其轻盈、敏捷、可集群、耐高并发之特性；“云养”则强调其无需本地安装、不依赖宿主环境、按需拉取、即启即用的云原生基因。它不是容器，不是虚拟机，甚至不是传统意义上的 runtime——它是 WebAssembly 在服务端落地的成熟范式结晶。
+ 一、破题：为什么“龙虾”突然刷屏？一场被低估的运行时范式迁移 2026 年 3 月上旬，技术圈悄然掀起一股名为“龙虾”的涟漪。起初只是零星 GitHub Issue 中一句调侃：“我的函数跑在虾壳里，连 glibc 都没见过”；随后，阮一峰老师在其博客中以《零安装的&amp;quot;云养虾&amp;quot;：ArkClaw 使用指南》为题发布长文，引发全网转发与深度讨论。短短 72 小时内，ArkClaw GitHub 仓库 star 数突破 12,400，Discord 社区成员激增至 8,900+，多个头部云厂商内部已启动 ArkClaw 兼容层预研项目。
 但问题来了：我们已有 AWS Lambda、Cloudflare Workers、Vercel Edge Functions、Deno Deploy……为何一个新 runtime 能引发如此规模的集体关注？答案不在功能叠加，而在范式位移——ArkClaw 不是又一个 FaaS（函数即服务）平台，而是一次对“函数执行环境”底层契约的重新定义。
 传统 FaaS 存在三个长期未解的隐性成本：
-语言绑定枷锁：Lambda 支持 Node.js/Python/Java 等，但每新增一门语言，需云厂商投入数月适配 SDK、调试沙箱、维护 ABI 兼容性。开发者若想用 Zig 或 Gleam，只能等待或自行 fork； 冷启动幻痛：即便采用容器镜像预热，Linux namespace + cgroups 初始化仍需 100–300ms；更致命的是，不同函数间无法共享 JIT 缓存、TLS 会话、连接池等运行时状态； 可信边界模糊：沙箱（如 Firecracker、gVisor）本质仍是 OS 层隔离，攻击面大；而 WASM 沙箱通过线性内存隔离 + 显式能力导入（capability-based security），将权限收敛至函数声明所需最小集。 ArkClaw 正是直击这三重痛点而生：它不提供语言 SDK，只暴露标准 WASI 接口；它不管理进程生命周期，只调度 wasm 字节码模块；它不预置任何运行时，所有依赖（包括 HTTP 客户端、JSON 解析器、加密库）均由开发者以 .</description></item></channel></rss>
+ 语言绑定枷锁：Lambda 支持 Node.js/Python/Java 等，但每新增一门语言，需云厂商投入数月适配 SDK、调试沙箱、维护 ABI 兼容性。开发者若想用 Zig 或 Gleam，只能等待或自行 fork； 冷启动幻痛：即便采用容器镜像预热，Linux namespace + cgroups 初始化仍需 100–300ms；更致命的是，不同函数间无法共享 JIT 缓存、TLS 会话、连接池等运行时状态； 可信边界模糊：沙箱（如 Firecracker、gVisor）本质仍是 OS 层隔离，攻击面大；而 WASM 沙箱通过线性内存隔离 + 显式能力导入（capability-based security），将权限收敛至函数声明所需最小集。  ArkClaw 正是直击这三重痛点而生：它不提供语言 SDK，只暴露标准 WASI 接口；它不管理进程生命周期，只调度 wasm 字节码模块；它不预置任何运行时，所有依赖（包括 HTTP 客户端、JSON 解析器、加密库）均由开发者以 .</description>
+    </item>
+  </channel>
+</rss>
