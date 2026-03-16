@@ -147,6 +147,39 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">ETCD的内存问题
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>ETCD的内存问题：一次从现象到内核的深度排查与系统性反思 引言：当分布式协调服务开始“喘不过气” 在云原生基础设施的基石组件中，etcd 扮演着不可替代的角色——它是 Kubernetes 的“大脑”，是服务发现、配置管理与分布式锁的核心载体。其基于 Raft 共识算法实现的强一致性、高可用性与线性读写语义，使其成为生产环境中最值得信赖的状态存储之一。然而，正是这样一款被广泛部署于数百万集群中的关键中间件，近年来频繁在真实场景中暴露出一个看似简单却极具迷惑性的表征：内存使用量持续攀升，远超预期，且无法随负载下降而自然回收，最终导致 OOM Killer 干预、节点驱逐甚至集群脑裂。
+本文所解读的热点，源自酷壳（CoolShell）于 2023 年底发布的深度技术文章《ETCD的内存问题》。该文并非泛泛而谈的调优指南，而是以开源项目 Easegress 在实际运维中遭遇的一次典型故障为切口，完整复现了从监控告警、现象定位、源码追踪、根因验证到最终修复的全链路排查过程。尤为可贵的是，作者并未止步于“打补丁”，而是将问题置于更广阔的工程视角下展开思辨：etcd 的内存模型设计是否隐含结构性张力？Go 语言运行时（runtime）的 GC 行为与分布式系统长期运行特征之间是否存在未被充分认知的耦合风险？我们对“内存泄漏”的惯性归因，是否遮蔽了更本质的资源生命周期管理失配？
+本篇深度解读将严格遵循原始技术脉络，但进一步延伸其技术纵深与方法论价值。我们将逐层拆解：etcd 内存增长的典型模式与误判陷阱；Go runtime 中堆内存管理与 GC 触发机制的关键细节；etcd 核心数据结构（尤其是 mvcc 模块中 keyIndex 与 revision 的引用关系）如何在特定写入模式下悄然积累不可回收对象；通过 pprof 工具链进行内存分析的标准化流程；以及最终落地的修复方案——不仅包括社区已合并的 PR（如 etcd v3.5.10&#43; 中的 compact 优化与 watch 缓存清理增强），更涵盖面向生产环境的可观测性加固、压力建模与防御性配置策略。全文代码占比约 30%，所有示例均来自真实调试过程，注释全部采用简体中文，确保技术细节可验证、可复现、可迁移。
+本解读不预设读者具备 etcd 源码阅读经验，但要求对 Go 语言基础、Linux 系统监控及分布式系统基本概念有基本了解。我们将用最直白的语言解释每一个技术决策背后的权衡，因为真正的稳定性，永远诞生于对“为什么”的持续追问之中。
+本节完。
+第一节：现象还原——不是泄漏，胜似泄漏的内存“幽灵” 一切始于一个平静的下午。Easegress 团队收到 Prometheus 告警：某核心 etcd 集群节点内存使用率突破 95%，且曲线呈现近乎线性的单调上升趋势。该节点承载着 200&#43; 个微服务的配置同步与健康检查 watch 请求，QPS 稳定在 1200 左右，无突发流量，无异常日志。运维同学的第一反应是“内存泄漏”，随即执行标准排查动作：
+ 查看 top 与 ps aux --sort=-%mem，确认 etcd 进程独占绝大部分 RSS（Resident Set Size）； 使用 etcdctl endpoint status 检查健康状态、Raft term、leader 信息，全部正常； etcdctl endpoint health 返回 healthy； 检查磁盘空间、网络延迟、CPU 负载，均无异常。  此时，问题显现出第一个反直觉特征：进程健康，指标正常，唯独内存“默默膨胀”。这与典型的内存泄漏（如 goroutine 持有对象引用不释放）不同——后者往往伴随 GC 压力剧增、STW（Stop-The-World）时间延长、pprof heap profile 中出现大量未释放的业务对象。而此处，go tool pprof http://localhost:2379/debug/pprof/heap 抓取的快照显示，绝大多数内存被 runtime....</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-17 02:03:22 +0800 CST'>March 17, 2026</span>&nbsp;·&nbsp;<span>10 min</span>&nbsp;·&nbsp;<span>2025 words</span>&nbsp;·&nbsp;<span>千吉</span></footer>
+  <a class="entry-link" aria-label="post link to ETCD的内存问题" href="https://ape902.github.io/laoguo.github.io/posts/2026-03-17-etcd/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">从一次经历谈 TIME_WAIT 的那些事
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>从一次经历谈 TIME_WAIT 的那些事 引子：一个凌晨三点的告警电话 那是一个闷热的夏夜，凌晨三点十七分，手机在床头柜上剧烈震动。我抓起手机，屏幕上跳动着运维监控平台推送的红色告警：“核心支付网关连接成功率骤降至 32%，下游服务大量超时”。这不是第一次深夜被叫醒，但这一次，告警曲线异常陡峭——短短 90 秒内，成功率从 99.97% 断崖式滑落，且伴随 connect() 系统调用失败率飙升、errno = 99 (Cannot assign requested address) 频繁出现。
+我们立刻登录跳板机，进入支付网关所在集群。第一眼就看到 netstat -ant | grep :8080 | wc -l 输出高达 28,416 —— 而该服务监听端口为 8080，按理说 ESTABLISHED 连接数应稳定在 3000 左右。再执行：
+ss -s 输出关键片段如下：
+Total: 32412 (kernel 32687) TCP: 32408 (estab 2912, closed 28416, orphaned 0, synrecv 0, timewait 28416/0), ports 0 注意其中 timewait 28416/0 —— 这意味着系统中存在 28416 个处于 TIME_WAIT 状态的 socket，且全部集中在本地端口（即客户端主动关闭后留下的连接残影）。而更致命的是，closed 28416 与 timewait 28416 完全吻合，说明这些连接刚刚被关闭，尚未进入 TIME_WAIT 的“冷却期”结束阶段，却已挤占了几乎全部可用的本地端口资源池。...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-17 00:24:11 +0800 CST'>March 17, 2026</span>&nbsp;·&nbsp;<span>9 min</span>&nbsp;·&nbsp;<span>1718 words</span>&nbsp;·&nbsp;<span>千吉</span></footer>
+  <a class="entry-link" aria-label="post link to 从一次经历谈 TIME_WAIT 的那些事" href="https://ape902.github.io/laoguo.github.io/posts/2026-03-17-time-wait/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">聊聊 nostr 和 审查
     </h2>
   </header>

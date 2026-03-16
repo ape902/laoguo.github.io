@@ -6,8 +6,99 @@
     <description>Recent content in Tags on 老郭的技术笔记</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 16 Mar 2026 08:28:43 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 17 Mar 2026 04:23:53 +0800</lastBuildDate>
     <atom:link href="https://ape902.github.io/laoguo.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>IM</title>
+      <link>https://ape902.github.io/laoguo.github.io/tags/im/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/tags/im/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>协同工具</title>
+      <link>https://ape902.github.io/laoguo.github.io/tags/%E5%8D%8F%E5%90%8C%E5%B7%A5%E5%85%B7/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/tags/%E5%8D%8F%E5%90%8C%E5%B7%A5%E5%85%B7/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>团队协作</title>
+      <link>https://ape902.github.io/laoguo.github.io/tags/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/tags/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>工程效能</title>
+      <link>https://ape902.github.io/laoguo.github.io/tags/%E5%B7%A5%E7%A8%8B%E6%95%88%E8%83%BD/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/tags/%E5%B7%A5%E7%A8%8B%E6%95%88%E8%83%BD/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>开源实践</title>
+      <link>https://ape902.github.io/laoguo.github.io/tags/%E5%BC%80%E6%BA%90%E5%AE%9E%E8%B7%B5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/tags/%E5%BC%80%E6%BA%90%E5%AE%9E%E8%B7%B5/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>组织设计</title>
+      <link>https://ape902.github.io/laoguo.github.io/tags/%E7%BB%84%E7%BB%87%E8%AE%BE%E8%AE%A1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/tags/%E7%BB%84%E7%BB%87%E8%AE%BE%E8%AE%A1/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>API设计</title>
+      <link>https://ape902.github.io/laoguo.github.io/tags/api%E8%AE%BE%E8%AE%A1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/tags/api%E8%AE%BE%E8%AE%A1/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>HTTP</title>
+      <link>https://ape902.github.io/laoguo.github.io/tags/http/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/tags/http/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>REST</title>
+      <link>https://ape902.github.io/laoguo.github.io/tags/rest/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/tags/rest/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web架构</title>
+      <link>https://ape902.github.io/laoguo.github.io/tags/web%E6%9E%B6%E6%9E%84/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/tags/web%E6%9E%B6%E6%9E%84/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>安全</title>
+      <link>https://ape902.github.io/laoguo.github.io/tags/%E5%AE%89%E5%85%A8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/tags/%E5%AE%89%E5%85%A8/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>规范</title>
+      <link>https://ape902.github.io/laoguo.github.io/tags/%E8%A7%84%E8%8C%83/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/tags/%E8%A7%84%E8%8C%83/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>技术文章</title>
+      <link>https://ape902.github.io/laoguo.github.io/tags/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/tags/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Prime Video</title>
       <link>https://ape902.github.io/laoguo.github.io/tags/prime-video/</link>
@@ -72,13 +163,6 @@
       <description></description>
     </item>
     <item>
-      <title>安全</title>
-      <link>https://ape902.github.io/laoguo.github.io/tags/%E5%AE%89%E5%85%A8/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ape902.github.io/laoguo.github.io/tags/%E5%AE%89%E5%85%A8/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>网络编程</title>
       <link>https://ape902.github.io/laoguo.github.io/tags/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -118,13 +202,6 @@
       <link>https://ape902.github.io/laoguo.github.io/tags/%E7%96%AB%E6%83%85%E5%BA%94%E5%AF%B9/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://ape902.github.io/laoguo.github.io/tags/%E7%96%AB%E6%83%85%E5%BA%94%E5%AF%B9/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>技术文章</title>
-      <link>https://ape902.github.io/laoguo.github.io/tags/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ape902.github.io/laoguo.github.io/tags/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/</guid>
       <description></description>
     </item>
     <item>
@@ -174,13 +251,6 @@
       <link>https://ape902.github.io/laoguo.github.io/tags/devops/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://ape902.github.io/laoguo.github.io/tags/devops/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>工程效能</title>
-      <link>https://ape902.github.io/laoguo.github.io/tags/%E5%B7%A5%E7%A8%8B%E6%95%88%E8%83%BD/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ape902.github.io/laoguo.github.io/tags/%E5%B7%A5%E7%A8%8B%E6%95%88%E8%83%BD/</guid>
       <description></description>
     </item>
     <item>

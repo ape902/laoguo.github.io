@@ -6,8 +6,20 @@
     <description>Recent content in 安全 on 老郭的技术笔记</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 16 Mar 2026 00:29:35 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 17 Mar 2026 02:24:01 +0800</lastBuildDate>
     <atom:link href="https://ape902.github.io/laoguo.github.io/tags/%E5%AE%89%E5%85%A8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>“一把梭：REST API 全用 POST”</title>
+      <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-17-rest-api-post/</link>
+      <pubDate>Tue, 17 Mar 2026 02:24:01 +0800</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-17-rest-api-post/</guid>
+      <description>“一把梭：REST API 全用 POST”——一场关于 HTTP 方法语义、安全幻觉与工程权衡的深度解剖 在当代 Web 后端开发实践中，一个看似微小却极具象征意义的技术选择，正悄然撕开行业共识的表层：有人将全部 RESTful 接口统一定义为 POST 请求。这一做法被戏称为“一把梭”——意指不加区分、一概而论、全盘押注。它并非孤立个案，而是折射出开发者在安全性焦虑、框架惯性、协作成本、规范认知断层等多重压力下的真实妥协。本文将围绕酷壳（CoolShell）发布的同名文章《“一把梭：REST API 全用 POST”》展开系统性深度解读，拒绝简单站队“对错”，而是以 HTTP 协议本源为锚点，逐层拆解其技术动因、语义代价、安全真相、工程影响与演进路径。
+我们将从协议底层出发，厘清 GET/POST/PUT/DELETE 等方法的本质差异；剖析“HTTPS 下 POST 更安全”这一广泛流传但严重失真的认知谬误；通过可复现的代码实验，量化验证不同方法在缓存、幂等性、代理行为、浏览器限制等方面的客观表现；继而深入企业级场景，分析该模式在网关治理、日志审计、可观测性、前端适配及 OpenAPI 规范落地中的真实摩擦；最后提出一套分阶段、可落地的渐进式改进方案——既尊重现实约束，又坚守架构韧性底线。全文包含 17 个原创代码示例（覆盖 Python Flask/FastAPI、Node.js Express、curl 命令、Wireshark 抓包分析、OpenAPI Schema 验证等），所有代码均经实测运行，输出结果完整呈现。这不是一篇教条式的规范布道，而是一份面向一线工程师的、带着温度与实证的架构决策参考手册。
+一、HTTP 方法语义：不是语法糖，而是契约基石 HTTP 方法（HTTP Method）绝非请求行中一个可随意替换的字符串标签。它是 RFC 7231 等标准文档明确定义的语义契约（Semantic Contract），承载着客户端与服务器之间关于“意图”与“副作用”的关键约定。理解这一点，是评判“全用 POST”是否合理的第一道门槛。
+RFC 7231 将 HTTP 方法分为两类：安全方法（Safe Methods）与幂等方法（Idempotent Methods）。二者定义如下：
+ 安全方法：指该方法的执行不会对服务器资源状态产生任何修改。例如：GET、HEAD、OPTIONS、TRACE。注意：“安全”仅针对资源状态变更，不涉及日志记录、统计计数等无害副作用。 幂等方法：指对该资源执行一次或多次相同请求，其最终效果完全一致。例如：GET、HEAD、PUT、DELETE、OPTIONS、TRACE 是幂等的；而 POST 是典型的非幂等方法——连续提交两次 POST /api/orders 极可能创建两个订单。  这种分类不是学术游戏，而是现代 Web 架构可扩展性、可靠性和用户体验的底层保障。我们以 GET 和 POST 为例，通过协议行为对比揭示其本质差异：
+   特性维度 GET 请求 POST 请求     语义意图 获取资源表示（Read） 提交数据以触发处理（Create/Update/Action）   请求体（Body） 不允许携带请求体（RFC 明确禁止） 允许且鼓励携带结构化数据（JSON/form-data 等）   URL 长度限制 受浏览器、代理、服务器 URL 长度限制（通常 2KB~8KB） 无 URL 长度限制，数据置于请求体中   缓存行为 默认可被浏览器、CDN、反向代理缓存（需满足 Cache-Control 等条件） 默认不可缓存（除非显式配置 Cache-Control: public）   历史记录 URL 可被浏览器地址栏保存、前进后退、书签收藏 不会出现在地址栏历史中，无法直接书签访问   代理与中间件 可被透明代理重放、预取（如 Google 预加载） 代理通常不重放，避免重复提交风险   幂等性 幂等（重复获取同一资源，结果不变） 非幂等（重复提交可能产生多个资源或状态变更）    关键结论已浮现：GET 与 POST 的差异，远不止于“数据放 URL 还是放 Body”。它们是为解决不同问题域而生的设计原语——GET 天然适合无副作用的读取操作，POST 则专为有状态变更的写入操作而设。</description>
+    </item>
     <item>
       <title>eBPF 介绍</title>
       <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-16-ebpf/</link>
