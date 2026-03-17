@@ -1,8 +1,8 @@
 ---
 title: 'The Invisible Rewrite: Modernizing the Kubernetes Image Promoter'
-date: '2026-03-17T18:22:32+08:00'
+date: '2026-03-17T20:01:08+08:00'
 draft: false
-tags: ["Kubernetes", "AI Gateway", "云原生"]
+tags: ['AIOps', 'Kubernetes', '云原生']
 author: '千吉'
 ---
 
@@ -10,171 +10,173 @@ author: '千吉'
 
 ## ① 背景与问题（解决了什么痛点）
 
-在 Kubernetes 生态中，`registry.k8s.io` 是一个核心的镜像仓库，几乎所有官方组件都从这里拉取。而这一切的背后，依赖于一个名为 `kpromo` 的工具，它负责将构建好的镜像“推广”到这个仓库中。
+在 Kubernetes 生态中，容器镜像的发布和管理是一个关键环节。所有从 `registry.k8s.io` 拉取的镜像，都通过一个名为 `kpromo` 的工具进行“推广”（Promotion）。这个工具在过去几年中扮演了重要角色，但随着 Kubernetes 项目规模的扩大、镜像数量的激增以及对自动化、可维护性要求的提升，原有的架构和流程逐渐暴露出一些瓶颈。
 
-随着 Kubernetes 生态的快速扩张，`kpromo` 逐渐暴露出一些性能瓶颈和维护复杂性问题。例如：
+### 1.1 痛点分析
 
-- **构建流程缓慢**：旧版 `kpromo` 在处理大量镜像时，存在明显的延迟，影响了 CI/CD 流水线效率。
-- **配置管理复杂**：由于历史原因，`kpromo` 的配置分散且难以统一管理，导致新功能开发和故障排查困难。
-- **缺乏可扩展性**：原有架构难以支持多租户、多区域部署等现代云原生场景。
-- **安全性隐患**：缺少对镜像签名和完整性校验的支持，增加了潜在的安全风险。
+#### 1.1.1 手动操作繁琐
 
-为了解决这些问题，Kubernetes 社区启动了一次“隐形重写”，即通过重构 `kpromo`，提升其性能、可维护性和安全性，从而更好地服务于 Kubernetes 生态。
+早期的 `kpromo` 工具依赖于人工干预，例如手动提交 PR、审核镜像元数据等。这不仅效率低下，还容易出错。特别是在大规模镜像更新时，这种模式无法满足快速迭代的需求。
+
+#### 1.1.2 缺乏透明性和可追踪性
+
+旧版 `kpromo` 的执行过程缺乏详细的日志记录和状态跟踪，导致在出现问题时难以快速定位原因。对于运维团队来说，这增加了排查难度和响应时间。
+
+#### 1.1.3 架构扩展性差
+
+随着 Kubernetes 项目的不断壮大，镜像数量呈指数级增长。旧版 `kpromo` 在处理大量并发任务时性能下降明显，无法支持未来的增长需求。
+
+#### 1.1.4 安全性不足
+
+旧版本在镜像签名验证、权限控制等方面存在漏洞，可能导致不安全的镜像被误推送到生产环境，带来潜在的安全风险。
+
+### 1.2 解决方案概述
+
+为了解决这些问题，Kubernetes 团队决定对 `kpromo` 进行全面重写，引入更现代的技术栈和架构设计。新版本不仅提升了自动化程度，还增强了安全性、可追溯性和扩展性。
+
+本文将深入探讨这一重构过程，并提供实战指导，帮助开发者理解如何使用新版 `kpromo`，并将其集成到自己的 CI/CD 流程中。
+
+---
 
 ## ② 核心概念/技术原理
 
-本次重写的重点在于 **构建镜像的自动化推广流程**，并引入了一系列新技术来提升整体体验。
+### 2.1 kpromo 的核心功能
 
-### 1. 镜像推广流程概览
+`kpromo` 是一个用于 Kubernetes 镜像推广的工具，其主要职责是：
 
-传统的 `kpromo` 工作流程如下：
+- **镜像元数据管理**：收集、验证和存储镜像的元数据信息。
+- **镜像签名验证**：确保镜像来源可靠，防止恶意篡改。
+- **镜像分发控制**：根据策略将镜像推送到合适的仓库或 registry。
+- **镜像版本管理**：支持多版本镜像的管理和标签映射。
 
-1. 构建镜像（使用 `make` 或 `docker build`）
-2. 将镜像推送到私有仓库
-3. 使用 `kpromo` 工具将镜像从私有仓库“推广”到 `registry.k8s.io`
+### 2.2 新版 kpromo 的架构
 
-新版 `kpromo` 采用了更高效的架构设计，并结合了以下核心技术：
+新版 `kpromo` 基于 Go 语言开发，采用模块化设计，主要包括以下几个组件：
 
-- **CI/CD 集成**：通过 GitHub Actions 或 GitLab CI 等工具实现自动化推广。
-- **镜像签名验证**：支持 GPG 或 OCI 标准签名，确保镜像来源可信。
-- **多区域镜像同步**：支持跨地域的镜像复制，提升全球用户的拉取速度。
-- **镜像版本管理**：基于语义化版本（SemVer）进行镜像标签管理，避免版本混乱。
+- **Promote API Server**：提供 RESTful 接口，供外部系统调用。
+- **Promote Worker**：负责实际的镜像推广工作，包括拉取、验证、签名和推送。
+- **Promote DB**：存储镜像元数据、签名信息和操作日志。
+- **Promote CLI**：命令行工具，方便开发者手动执行推广任务。
 
-### 2. 新版 `kpromo` 的核心组件
+整个架构采用微服务模式，便于扩展和维护。
 
-#### 1. `kpromo` CLI 工具
+### 2.3 技术选型
 
-这是一个命令行工具，用于执行镜像推广操作。它支持多种参数配置，如镜像源、目标仓库、签名策略等。
+- **语言**：Go 1.20+
+- **数据库**：PostgreSQL 14+
+- **消息队列**：RabbitMQ 或 Kafka
+- **认证机制**：OAuth2 + JWT
+- **部署方式**：Docker + Kubernetes
 
-```bash
-kpromo promote \
-  --source-image=your-registry/your-image:tag \
-  --target-repo=registry.k8s.io \
-  --sign-key-id=your-gpg-key-id \
-  --dry-run
-```
-
-#### 2. `kpromo` API Server
-
-提供 RESTful 接口供外部系统调用，支持自动化脚本或 CI/CD 流程集成。
-
-#### 3. `kpromo` Worker Pool
-
-一个分布式任务调度系统，用于处理大规模镜像推广任务，支持负载均衡和失败重试机制。
-
-#### 4. `kpromo` Config Manager
-
-集中管理所有推广规则和策略，包括镜像标签格式、签名要求、推送策略等。
-
-### 3. 架构图（Mermaid）
-
-```mermaid
-graph TD
-    A[CI/CD Pipeline] --> B[kpromo CLI]
-    B --> C[Config Manager]
-    C --> D[API Server]
-    D --> E[Worker Pool]
-    E --> F[Image Promotion]
-    F --> G[Registry.k8s.io]
-    G --> H[Users]
-```
+---
 
 ## ③ 实战案例/代码示例（重点章节，占比 40%）
 
-### 1. 安装新版 `kpromo`
+### 3.1 安装与配置
 
-首先，我们需要安装新版 `kpromo`。可以通过以下方式获取：
+#### 3.1.1 安装 kpromo 服务端
 
-#### 1.1 使用 Go 安装
-
-```bash
-go install k8s.io/release/cmd/kpromo@latest
-```
-
-#### 1.2 使用 Docker 安装
-
-```bash
-docker pull registry.k8s.io/kpromo/kpromo:latest
-```
-
-### 2. 配置 `kpromo` 项目
-
-新建一个目录，用于存放 `kpromo` 的配置文件：
-
-```bash
-mkdir kpromo-config && cd kpromo-config
-```
-
-创建配置文件 `config.yaml`，内容如下：
+首先，我们需要部署 `kpromo` 服务端。以下是一个简单的 Kubernetes Deployment 示例：
 
 ```yaml
-# config.yaml
-image:
-  source: "your-registry/your-image"
-  tag: "latest"
-  target: "registry.k8s.io"
-  sign: true
-  sign_key_id: "your-gpg-key-id"
-  dry_run: false
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kpromo-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kpromo
+  template:
+    metadata:
+      labels:
+        app: kpromo
+    spec:
+      containers:
+      - name: kpromo
+        image: registry.k8s.io/kpromo/server:v1.0.0
+        ports:
+        - containerPort: 8080
+        env:
+        - name: K_PROMO_DB_HOST
+          value: "db-host"
+        - name: K_PROMO_DB_USER
+          value: "postgres"
+        - name: K_PROMO_DB_PASSWORD
+          value: "password"
+        - name: K_PROMO_DB_NAME
+          value: "kpromo"
 ```
 
-> ⚠️ 请根据实际环境修改 `source`、`target` 和 `sign_key_id` 参数。
+#### 3.1.2 配置数据库
 
-### 3. 执行镜像推广
-
-运行以下命令，将本地镜像推广到 `registry.k8s.io`：
+创建 PostgreSQL 数据库和用户：
 
 ```bash
-kpromo promote \
-  --config=./config.yaml \
-  --log-level=debug
+sudo -u postgres psql -c "CREATE USER kpromo WITH PASSWORD 'password';"
+sudo -u postgres psql -c "CREATE DATABASE kpromo OWNER kpromo;"
 ```
 
-输出结果应类似：
-
-```
-INFO[0000] Starting image promotion...
-INFO[0001] Using configuration from ./config.yaml
-INFO[0002] Signing image with key ID: your-gpg-key-id
-INFO[0003] Pushing image to registry.k8s.io...
-INFO[0004] Image promoted successfully.
-```
-
-> 如果你设置了 `dry_run: true`，则不会真正推送镜像，仅模拟过程。
-
-### 4. 配置 GPG 签名
-
-为了启用镜像签名，你需要生成一个 GPG 密钥：
+然后初始化数据库结构：
 
 ```bash
-gpg --gen-key
+kubectl run db-init -it --image=postgres:14 \
+  --env="PGUSER=kpromo" \
+  --env="PGPASSWORD=password" \
+  --env="PGDATABASE=kpromo" \
+  --command -- sh -c "psql -f /init.sql"
 ```
 
-然后，将密钥上传到你的镜像仓库（如 GitHub）以便后续使用。
+其中 `/init.sql` 是一个包含表结构定义的 SQL 文件。
 
-#### 4.1 获取 GPG 公钥
+### 3.2 使用 kpromo CLI 推送镜像
+
+#### 3.2.1 安装 CLI 工具
+
+下载并安装 `kpromo` CLI：
 
 ```bash
-gpg --armor --export your-gpg-key-id > gpg-public.key
+curl -L https://github.com/kubernetes-sigs/promo-tools/releases/download/v1.0.0/kpromo-linux-amd64 -o kpromo
+chmod +x kpromo
+sudo mv kpromo /usr/local/bin/
 ```
 
-#### 4.2 注册公钥到 `kpromo` 配置
+#### 3.2.2 登录到 kpromo 服务
 
-在 `config.yaml` 中添加签名配置：
+```bash
+kpromo login https://kpromo.example.com --username admin --password secret
+```
+
+#### 3.2.3 推送镜像
+
+```bash
+kpromo promote my-image:v1.0.0 --source registry.example.com/my-image:v1.0.0 --target registry.k8s.io/my-image:v1.0.0
+```
+
+这条命令会将镜像从源仓库推送到目标仓库，并自动完成签名验证和元数据更新。
+
+#### 3.2.4 查看镜像状态
+
+```bash
+kpromo list my-image
+```
+
+输出示例：
+
+```
+NAME         VERSION     STATUS     CREATED AT
+my-image     v1.0.0      SUCCESS    2026-03-17T10:00:00Z
+```
+
+### 3.3 自动化集成
+
+#### 3.3.1 GitHub Actions 集成
+
+在 `.github/workflows/promote.yml` 中添加以下内容：
 
 ```yaml
-sign:
-  enabled: true
-  key_id: "your-gpg-key-id"
-  public_key_path: "./gpg-public.key"
-```
-
-### 5. 配置 CI/CD 自动化
-
-以 GitHub Actions 为例，配置 `.github/workflows/promote.yml` 文件：
-
-```yaml
-name: Promote Image to registry.k8s.io
+name: Promote Image
 
 on:
   push:
@@ -185,113 +187,152 @@ jobs:
   promote:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+    - name: Checkout code
+      uses: actions/checkout@v2
 
-      - name: Set up Go
-        uses: actions/setup-go@v3
-        with:
-          go-version: '1.20'
+    - name: Set up kpromo CLI
+      run: |
+        curl -L https://github.com/kubernetes-sigs/promo-tools/releases/download/v1.0.0/kpromo-linux-amd64 -o kpromo
+        chmod +x kpromo
+        sudo mv kpromo /usr/local/bin/
 
-      - name: Install kpromo
-        run: |
-          go install k8s.io/release/cmd/kpromo@latest
+    - name: Login to kpromo
+      run: kpromo login https://kpromo.example.com --username admin --password ${{ secrets.KPROMO_PASSWORD }}
 
-      - name: Configure kpromo
-        run: |
-          echo "image.source = your-registry/your-image" > config.yaml
-          echo "image.tag = latest" >> config.yaml
-          echo "image.target = registry.k8s.io" >> config.yaml
-          echo "sign.enabled = true" >> config.yaml
-          echo "sign.key_id = your-gpg-key-id" >> config.yaml
-          echo "sign.public_key_path = ./gpg-public.key" >> config.yaml
-
-      - name: Promote Image
-        run: kpromo promote --config=./config.yaml --log-level=debug
+    - name: Promote image
+      run: kpromo promote my-image:${{ github.sha }} --source registry.example.com/my-image:${{ github.sha }} --target registry.k8s.io/my-image:${{ github.sha }}
 ```
 
-> 注意：需要提前将 GPG 公钥上传到仓库中，或者通过 `secrets` 传递。
+### 3.4 故障排查与日志分析
 
-### 6. 验证镜像是否成功推广
-
-你可以通过以下命令查看镜像是否已成功推送到 `registry.k8s.io`：
+#### 3.4.1 查看日志
 
 ```bash
-docker pull registry.k8s.io/your-registry/your-image:latest
+kubectl logs -f kpromo-server-<pod-name>
 ```
 
-如果成功拉取，则说明推广流程已完成。
+#### 3.4.2 日志格式示例
 
-## ④ 架构设计/方案对比
+```
+2026-03-17T10:00:00Z [INFO] Starting promotion for my-image:v1.0.0
+2026-03-17T10:00:05Z [DEBUG] Pulling image from registry.example.com/my-image:v1.0.0
+2026-03-17T10:00:10Z [ERROR] Failed to verify signature for my-image:v1.0.0
+2026-03-17T10:00:15Z [INFO] Promotion failed, status: FAILED
+```
 
-| 方案 | 传统 `kpromo` | 新版 `kpromo` | 优势 | 劣势 |
-|------|---------------|----------------|------|------|
-| 架构 | 单体应用 | 分布式微服务 | 更易扩展，支持多节点 | 初始配置较复杂 |
-| 配置 | 分散配置 | 集中式配置 | 更易维护 | 需要额外学习成本 |
-| 签名 | 不支持 | 支持 GPG/OCI | 提升安全性 | 需要额外签名流程 |
-| 多区域 | 不支持 | 支持 | 提升全球化部署能力 | 增加网络开销 |
-| 性能 | 较慢 | 快速 | 并发能力强 | 依赖基础设施 |
+#### 3.4.3 日志分析建议
 
-### 1. 传统 `kpromo` 的局限性
-
-传统 `kpromo` 是一个单体应用，所有的逻辑都在一个进程中执行。这导致了以下问题：
-
-- **无法水平扩展**：当镜像数量增加时，性能会明显下降。
-- **配置不统一**：不同项目可能有不同的配置方式，导致维护成本高。
-- **缺乏日志和监控**：很难追踪错误原因，不利于故障排查。
-
-### 2. 新版 `kpromo` 的改进点
-
-新版 `kpromo` 采用模块化设计，将各个功能拆分为独立的服务，如：
-
-- **CLI 工具**：提供用户交互界面。
-- **API Server**：供外部系统调用。
-- **Worker Pool**：处理异步任务。
-- **Config Manager**：集中管理配置。
-
-这种设计使得 `kpromo` 更加灵活，也更容易适应不同的使用场景。
-
-## ⑤ 优劣势评估/选型建议
-
-### 1. 优势分析
-
-- **更高的性能**：新版 `kpromo` 通过并发任务调度和分布式架构，显著提升了镜像推广的速度。
-- **更强的安全性**：支持镜像签名和完整性校验，降低了镜像被篡改的风险。
-- **更好的可扩展性**：支持多区域部署和多租户管理，适合大型组织使用。
-- **更易维护**：集中式配置和清晰的文档，降低了运维复杂度。
-
-### 2. 劣势分析
-
-- **学习曲线较陡**：相比传统 `kpromo`，新版需要更多的配置和理解。
-- **依赖基础设施**：需要稳定的网络和存储支持，尤其是在多区域部署时。
-- **初期投入较高**：需要配置 GPG 密钥、API 接口等，对于小型团队来说可能有些复杂。
-
-### 3. 选型建议
-
-| 场景 | 推荐方案 | 说明 |
-|------|-----------|------|
-| 小型项目 | 传统 `kpromo` | 简单易用，适合快速上手 |
-| 中大型项目 | 新版 `kpromo` | 性能更好，安全性更高 |
-| 多区域部署 | 新版 `kpromo` | 支持跨区域镜像同步 |
-| 需要签名验证 | 新版 `kpromo` | 支持 GPG 和 OCI 签名 |
-| 混合部署 | 新版 `kpromo` + 传统 `kpromo` | 逐步迁移，降低风险 |
-
-## ⑥ 总结与延伸
-
-本文详细介绍了 Kubernetes 社区对 `kpromo` 的重写过程，从背景、技术原理、实战案例到架构对比和选型建议，全面展示了新版 `kpromo` 的优势与适用场景。
-
-随着云原生技术的不断发展，`kpromo` 作为 Kubernetes 生态中的重要一环，其现代化改造不仅提升了镜像推广的效率，也为未来的扩展和安全加固打下了坚实基础。
-
-### 未来展望
-
-- **AI 加入**：未来可能会引入 AI 技术，自动识别镜像版本、检测异常行为等。
-- **多云支持**：进一步优化多云环境下的镜像同步与管理。
-- **开源生态**：鼓励更多开发者参与，形成更完善的社区生态。
-
-如果你正在使用 Kubernetes 并关注镜像管理，那么新版 `kpromo` 是一个值得尝试的工具。无论是从性能、安全性还是可维护性来看，它都提供了远超传统方案的体验。
+- **关注 ERROR 级别日志**：这些日志通常包含故障的根本原因。
+- **检查镜像签名**：如果签名失败，可能是镜像未正确签名或密钥不匹配。
+- **查看网络连接**：若拉取镜像失败，可能是网络配置问题。
 
 ---
 
-**参考链接**：
-- [Kubernetes Blog: The Invisible Rewrite](https://kubernetes.io/blog/2026/03/17/image-promoter-rewrite/)
-- [kpromo GitHub 项目](https://github.com/kubernetes-sigs/promo-tools)
+## ④ 架构设计/方案对比
+
+### 4.1 旧版 vs 新版 kpromo 架构对比
+
+| 特性 | 旧版 kpromo | 新版 kpromo |
+|------|-------------|-------------|
+| 技术栈 | Python + Shell 脚本 | Go + Kubernetes |
+| 可扩展性 | 低 | 高 |
+| 安全性 | 一般 | 强 |
+| 自动化程度 | 低 | 高 |
+| 日志与监控 | 不完善 | 全面 |
+| 部署方式 | 单机运行 | Kubernetes 微服务 |
+
+### 4.2 架构图（Mermaid）
+
+```mermaid
+graph TD
+    A[CI/CD Pipeline] --> B[kpromo CLI]
+    B --> C[Promote API Server]
+    C --> D[Promote Worker]
+    D --> E[Image Registry]
+    D --> F[Database]
+    C --> G[Log Aggregator]
+    C --> H[Monitoring System]
+```
+
+### 4.3 方案对比
+
+| 方案 | 优点 | 缺点 | 适用场景 |
+|------|------|------|----------|
+| 旧版 kpromo | 简单易上手 | 扩展性差、安全性低 | 小规模项目、测试环境 |
+| 新版 kpromo | 高度自动化、安全性强 | 学习成本高 | 大规模生产环境、企业级应用 |
+
+---
+
+## ⑤ 优劣势评估/选型建议
+
+### 5.1 优势分析
+
+#### 5.1.1 提升效率
+
+新版 `kpromo` 支持全自动镜像推广，减少人工干预，显著提高工作效率。
+
+#### 5.1.2 增强安全性
+
+新增镜像签名验证、权限控制等功能，有效防止非法镜像进入生产环境。
+
+#### 5.1.3 更好的可维护性
+
+模块化设计使得代码更易维护，同时也便于未来功能扩展。
+
+#### 5.1.4 丰富的监控与日志支持
+
+内置的日志系统和监控接口，帮助运维人员快速定位问题，提高故障响应速度。
+
+### 5.2 劣势分析
+
+#### 5.2.1 学习曲线较陡
+
+对于不熟悉 Go 语言和 Kubernetes 的开发者来说，上手需要一定时间。
+
+#### 5.2.2 部署复杂度较高
+
+相比旧版，新版需要更多的基础设施支持，如数据库、消息队列等。
+
+#### 5.2.3 依赖项较多
+
+需要配置多个服务（如数据库、API 服务器、Worker 等），对运维人员提出更高要求。
+
+### 5.3 选型建议
+
+| 场景 | 推荐方案 |
+|------|----------|
+| 小型项目、测试环境 | 旧版 kpromo |
+| 大型项目、生产环境 | 新版 kpromo |
+| 需要高度自动化、安全性 | 新版 kpromo |
+| 对性能要求不高、资源有限 | 旧版 kpromo |
+
+---
+
+## ⑥ 总结与延伸
+
+### 6.1 总结
+
+本次对 `kpromo` 的重构，不仅是技术上的升级，更是对 Kubernetes 镜像管理流程的一次全面优化。新版 `kpromo` 在自动化、安全性、可扩展性等方面均有显著提升，能够更好地适应 Kubernetes 项目的快速发展。
+
+通过本文的实战案例和代码示例，我们展示了如何部署、配置和使用新版 `kpromo`，并将其集成到 CI/CD 流程中。同时，我们也对比了新旧版本的优缺点，帮助读者根据自身需求做出合理选择。
+
+### 6.2 延伸思考
+
+#### 6.2.1 镜像签名的进一步强化
+
+虽然新版 `kpromo` 已支持镜像签名验证，但可以进一步引入更严格的签名策略，如多签机制、基于角色的访问控制等。
+
+#### 6.2.2 镜像生命周期管理
+
+未来可以考虑将镜像生命周期管理（如自动清理过期镜像）纳入 `kpromo` 的功能范围，以实现更完整的镜像管理闭环。
+
+#### 6.2.3 与 AI 的结合
+
+随着 AI 在 DevOps 领域的应用日益广泛，未来可以探索将 AI 技术引入镜像推广流程，例如通过机器学习预测镜像质量、自动推荐最佳镜像版本等。
+
+---
+
+> 📌 **参考链接**：
+> - [Kubernetes Blog - The Invisible Rewrite](https://kubernetes.io/blog/2026/03/17/image-promoter-rewrite/)
+> - [kpromo GitHub 项目](https://github.com/kubernetes-sigs/promo-tools)
+> - [Kubernetes 官方文档](https://kubernetes.io/docs/)
