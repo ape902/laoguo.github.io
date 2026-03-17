@@ -147,6 +147,56 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Kubernetes Image Promoter 重构：一场无人察觉的 20% 代码删减
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>📊 信息来源
+ 来源平台：Kubernetes Blog 原文链接：https://kubernetes.io/blog/2026/03/17/image-promoter-rewrite/ 热度指数：17.00 生成时间：2026-03-18 04:22    Kubernetes Image Promoter 重构：一场无人察觉的 20% 代码删减 每次你从 registry.k8s.io 拉取容器镜像时，这些镜像都是通过 kpromo（Kubernetes 镜像推广工具）到达那里的。它负责将镜像从临时注册表复制到生产注册表，使用 cosign 进行签名，在 20 多个区域镜像站之间复制签名，并生成 SLSA 溯源证明。如果这个工具出问题，Kubernetes 发布就会中断。
+在过去的几周里，Kubernetes 社区从头重写了它的核心代码，删除了 20% 的代码库，使其性能大幅提升，而没有人注意到——这正是他们的目标。
+① 历史背景：从内部工具到社区项目 起源（2018 年） Image Promoter 始于 2018 年末，由 Linus Arver 作为 Google 内部项目发起。目标很简单：用社区拥有的、基于 GitOps 的工作流，取代手动的、需要 Google 员工审批的镜像复制流程。
+工作流程： 推送到临时注册表 → 提交包含 YAML 清单的 PR → 审核并合并 → 自动化处理剩余工作 KEP-1734 正式化了这一提案。
+发展历程（2019-2025 年）    时间 里程碑 贡献者     2019 年初 代码迁移到 kubernetes-sigs/k8s-container-image-promoter Linus Arver   2020-2022 整合多个工具（cip、gh2gcs、krel promote-images）为单一 CLI kpromo Stephen Augustus   2022-2023 添加 cosign 签名和 SBOM 支持 Adolfo Garcia Veytia (Puerco)   2023-2024 构建漏洞扫描功能 Tyler Ferrara   持续维护 保持项目健康和可发布状态 Carlos Panato    数据概览：...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-18 04:22:00 +0800 CST'>March 18, 2026</span>&nbsp;·&nbsp;<span>4 min</span>&nbsp;·&nbsp;<span>735 words</span>&nbsp;·&nbsp;<span>千吉</span></footer>
+  <a class="entry-link" aria-label="post link to Kubernetes Image Promoter 重构：一场无人察觉的 20% 代码删减" href="https://ape902.github.io/laoguo.github.io/posts/2026-03-18-kubernetes-image-promoter-rewrite/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Ingress NGINX: Statement from the Kubernetes Steering and Security Response Committees
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Ingress NGINX: Statement from the Kubernetes Steering and Security Response Committees ① 背景与问题（解决了什么痛点） 在 Kubernetes 生态中，Ingress 是实现对外服务暴露的关键组件。它通过定义规则将外部流量路由到集群内部的服务。而 Ingress NGINX 作为最受欢迎的 Ingress 控制器之一，曾广泛用于生产环境。然而，在 2026 年 3 月，Kubernetes 官方宣布将正式退役 Ingress NGINX。
+这一决定背后的原因复杂，但主要涉及以下几点：
+ 安全性问题：随着安全威胁的不断升级，Ingress NGINX 在一些关键漏洞修复上存在滞后。 维护成本高：社区和官方团队对 Ingress NGINX 的支持逐渐减少，导致维护难度加大。 技术演进：新的 Ingress 控制器如 Nginx Ingress Controller（由 Nginx 官方维护）和 Kong Ingress Controller 等提供了更先进的功能和更好的性能。  对于依赖 Ingress NGINX 的企业来说，这无疑是一个重大挑战。如何在不影响业务的前提下完成迁移，是当前最紧迫的问题。
+ ② 核心概念/技术原理 什么是 Ingress？ Ingress 是 Kubernetes 中的一个 API 对象，用于管理对外访问的 HTTP 和 HTTPS 流量。通过定义 Ingress 规则，可以将外部请求路由到集群内的不同服务。...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-17 12:00:56 +0800 CST'>March 17, 2026</span>&nbsp;·&nbsp;<span>3 min</span>&nbsp;·&nbsp;<span>533 words</span>&nbsp;·&nbsp;<span>千吉</span></footer>
+  <a class="entry-link" aria-label="post link to Ingress NGINX: Statement from the Kubernetes Steering and Security Response Committees" href="https://ape902.github.io/laoguo.github.io/posts/2026-03-17-ingress-nginx-statement-from-the-kubernetes-steering-and/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Spotlight on SIG Architecture: API Governance
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Spotlight on SIG Architecture: API Governance ① 背景与问题（解决了什么痛点） 在 Kubernetes 生态中，随着微服务架构的广泛应用，API 管理逐渐成为运维和开发团队关注的核心议题。尤其是在 AI 与云原生技术深度融合的背景下，如何对 API 进行统一治理、确保安全性、可扩展性和可观测性，已经成为企业构建现代化应用平台的关键挑战。
+传统的 API 管理方式往往依赖于独立的网关或中间件，导致系统复杂度高、维护成本大。此外，API 的版本管理、流量控制、安全策略、日志追踪等需求，也常常分散在多个组件中，缺乏统一的治理机制。这不仅增加了部署和调试的难度，还可能引发性能瓶颈和安全隐患。
+SIG Architecture 在其最新的 Spotlight 系列中，聚焦于 API Governance（API 治理）这一关键子项目，旨在为 Kubernetes 提供一套统一、灵活、可扩展的 API 管理方案。通过该方案，开发者可以更高效地管理 API 的生命周期，提升系统的可观测性、安全性和可维护性。
+本文将围绕 API Governance 的实战应用展开，深入探讨其核心概念、技术原理、实际案例、架构设计及优劣势评估，帮助读者快速上手并掌握其最佳实践。
+ ② 核心概念/技术原理 什么是 API Governance？ API Governance 是指对 API 的全生命周期进行统一管理的过程，包括但不限于：
+ API 注册与发现 版本控制 权限控制 流量控制 安全策略 日志与监控 自动化测试与部署  在 Kubernetes 中，API Governance 的目标是将这些功能集成到集群内部，形成一个统一的 API 管理平台，避免使用外部网关带来的额外复杂性。
+核心组件与架构 SIG Architecture 的 API Governance 架构主要包括以下几个核心组件：...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-17 10:44:44 +0800 CST'>March 17, 2026</span>&nbsp;·&nbsp;<span>3 min</span>&nbsp;·&nbsp;<span>550 words</span>&nbsp;·&nbsp;<span>千吉</span></footer>
+  <a class="entry-link" aria-label="post link to Spotlight on SIG Architecture: API Governance" href="https://ape902.github.io/laoguo.github.io/posts/2026-03-17-spotlight-on-sig-architecture-api-governance/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">是微服务架构不香还是云不香？
     </h2>
   </header>

@@ -147,6 +147,42 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">未命名文章
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>--- title: &#39;Announcing the AI Gateway Working Group&#39; date: &#39;2026-03-17T10:30:00&#43;08:00&#39; draft: false tags: [&#39;Kubernetes&#39;, &#39;AI Gateway&#39;, &#39;云原生&#39;] author: &#39;千吉&#39; --- Announcing the AI Gateway Working Group ① 背景与问题（解决了什么痛点） 在当今快速发展的云计算和人工智能领域，Kubernetes 已经成为企业构建和管理云原生应用的核心平台。然而，随着 AI 技术的广泛应用，开发者在 Kubernetes 上部署、管理和调用 AI 模型时，面临着一系列挑战：
+1. 模型部署复杂度高 传统上，AI 模型需要单独部署为服务，如使用 TensorFlow Serving 或 PyTorch Serve，这些服务通常需要独立的配置和运行环境。对于多模型场景，这种分散的部署方式不仅增加了运维负担，还容易导致资源浪费。
+2. API 管理不统一 不同的 AI 模型可能使用不同的 API 接口，甚至同一模型也可能有多个版本。这使得客户端调用变得复杂，缺乏统一的接口规范，难以实现自动化调用和监控。
+3. 性能瓶颈明显 AI 模型的推理过程对计算资源要求极高，尤其是在大规模并发请求下，传统的部署方式往往无法有效利用 GPU/TPU 资源，导致响应延迟增加，吞吐量下降。
+4. 缺乏统一的模型生命周期管理 从训练到部署再到更新，AI 模型的整个生命周期缺乏统一的管理机制。开发者需要手动处理模型版本控制、回滚、灰度发布等操作，增加了出错的风险。
+5. 安全性和可扩展性不足 AI 服务的安全性、访问控制和日志审计等方面缺乏标准化的解决方案，导致企业在生产环境中面临潜在风险。
+为了解决这些问题，Kubernetes 社区正式宣布成立 AI Gateway Working Group（AI 网关工作组），旨在为 Kubernetes 生态提供一套统一、高效、安全的 AI 服务接入和管理方案。...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-17 10:43:14 +0800 CST'>March 17, 2026</span>&nbsp;·&nbsp;<span>3 min</span>&nbsp;·&nbsp;<span>573 words</span>&nbsp;·&nbsp;<span>千吉</span></footer>
+  <a class="entry-link" aria-label="post link to 未命名文章" href="https://ape902.github.io/laoguo.github.io/posts/2026-03-17-tech-article/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Cluster API v1.12: Introducing In-place Updates and Chained Upgrades
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Cluster API v1.12：引入就地更新与链式升级 引言：Kubernetes 集群管理的演进 随着 Kubernetes 在企业中的广泛应用，集群生命周期管理逐渐成为 DevOps 和平台团队关注的核心问题。Kubernetes 的核心优势之一是其声明式配置模型，它允许用户通过定义资源状态来管理基础设施和应用。然而，传统的集群管理方式往往依赖于手动操作或脚本化流程，这不仅效率低下，还容易出错。
+为了解决这一问题，Kubernetes 生态中诞生了 Cluster API（也称为 cluster-api），它提供了一种基于 Kubernetes 原生 API 的集群生命周期管理方案。Cluster API 使得用户可以通过 Kubernetes 资源（如 Cluster、MachineDeployment 等）来定义和管理集群的生命周期，从而实现更高效、可重复和可扩展的集群管理方式。
+在 Cluster API v1.12 版本中，开发者引入了两项关键功能：就地更新（In-place Updates） 和 链式升级（Chained Upgrades）。这两项功能极大地提升了集群升级的灵活性和安全性，使得集群管理更加贴近现代 DevOps 实践。
+本文将深入解读 Cluster API v1.12 的这两个新特性，并探讨它们如何影响 Kubernetes 集群的管理方式。
+ 一、Cluster API 概述与核心概念 1.1 什么是 Cluster API？ Cluster API 是 Kubernetes 官方维护的一个项目，旨在提供一个标准化的集群生命周期管理解决方案。它基于 Kubernetes 的声明式 API，允许用户通过 Kubernetes 资源来创建、更新、删除和管理 Kubernetes 集群。
+Cluster API 的设计目标是：
+ 提供统一的接口，用于管理不同云厂商和本地环境中的 Kubernetes 集群。 支持跨集群的资源管理和监控。 与 Kubernetes 的其他生态工具（如 kubeadm、kops、kubestack 等）兼容，形成完整的集群生命周期管理生态。  1....</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-17 10:16:35 +0800 CST'>March 17, 2026</span>&nbsp;·&nbsp;<span>3 min</span>&nbsp;·&nbsp;<span>525 words</span>&nbsp;·&nbsp;<span>千吉</span></footer>
+  <a class="entry-link" aria-label="post link to Cluster API v1.12: Introducing In-place Updates and Chained Upgrades" href="https://ape902.github.io/laoguo.github.io/posts/2026-03-17-cluster-api-v1-12-introducing-in-place-updates/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">ETCD的内存问题
     </h2>
   </header>

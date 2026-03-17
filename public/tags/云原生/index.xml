@@ -6,8 +6,38 @@
     <description>Recent content in 云原生 on 老郭的技术笔记</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 16 Mar 2026 22:24:22 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 18 Mar 2026 04:22:00 +0800</lastBuildDate>
     <atom:link href="https://ape902.github.io/laoguo.github.io/tags/%E4%BA%91%E5%8E%9F%E7%94%9F/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kubernetes Image Promoter 重构：一场无人察觉的 20% 代码删减</title>
+      <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-18-kubernetes-image-promoter-rewrite/</link>
+      <pubDate>Wed, 18 Mar 2026 04:22:00 +0800</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-18-kubernetes-image-promoter-rewrite/</guid>
+      <description>深度解析 Kubernetes 镜像推广工具 kpromo 的重构历程：如何在保证零用户感知的前提下，删减 20% 代码，提升 10 倍性能，并添加 SLSA 溯源证明。</description>
+    </item>
+    <item>
+      <title>Ingress NGINX: Statement from the Kubernetes Steering and Security Response Committees</title>
+      <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-17-ingress-nginx-statement-from-the-kubernetes-steering-and/</link>
+      <pubDate>Tue, 17 Mar 2026 12:00:56 +0800</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-17-ingress-nginx-statement-from-the-kubernetes-steering-and/</guid>
+      <description>Ingress NGINX: Statement from the Kubernetes Steering and Security Response Committees ① 背景与问题（解决了什么痛点） 在 Kubernetes 生态中，Ingress 是实现对外服务暴露的关键组件。它通过定义规则将外部流量路由到集群内部的服务。而 Ingress NGINX 作为最受欢迎的 Ingress 控制器之一，曾广泛用于生产环境。然而，在 2026 年 3 月，Kubernetes 官方宣布将正式退役 Ingress NGINX。
+这一决定背后的原因复杂，但主要涉及以下几点：
+ 安全性问题：随着安全威胁的不断升级，Ingress NGINX 在一些关键漏洞修复上存在滞后。 维护成本高：社区和官方团队对 Ingress NGINX 的支持逐渐减少，导致维护难度加大。 技术演进：新的 Ingress 控制器如 Nginx Ingress Controller（由 Nginx 官方维护）和 Kong Ingress Controller 等提供了更先进的功能和更好的性能。  对于依赖 Ingress NGINX 的企业来说，这无疑是一个重大挑战。如何在不影响业务的前提下完成迁移，是当前最紧迫的问题。
+ ② 核心概念/技术原理 什么是 Ingress？ Ingress 是 Kubernetes 中的一个 API 对象，用于管理对外访问的 HTTP 和 HTTPS 流量。通过定义 Ingress 规则，可以将外部请求路由到集群内的不同服务。</description>
+    </item>
+    <item>
+      <title>Spotlight on SIG Architecture: API Governance</title>
+      <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-17-spotlight-on-sig-architecture-api-governance/</link>
+      <pubDate>Tue, 17 Mar 2026 10:44:44 +0800</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-17-spotlight-on-sig-architecture-api-governance/</guid>
+      <description>Spotlight on SIG Architecture: API Governance ① 背景与问题（解决了什么痛点） 在 Kubernetes 生态中，随着微服务架构的广泛应用，API 管理逐渐成为运维和开发团队关注的核心议题。尤其是在 AI 与云原生技术深度融合的背景下，如何对 API 进行统一治理、确保安全性、可扩展性和可观测性，已经成为企业构建现代化应用平台的关键挑战。
+传统的 API 管理方式往往依赖于独立的网关或中间件，导致系统复杂度高、维护成本大。此外，API 的版本管理、流量控制、安全策略、日志追踪等需求，也常常分散在多个组件中，缺乏统一的治理机制。这不仅增加了部署和调试的难度，还可能引发性能瓶颈和安全隐患。
+SIG Architecture 在其最新的 Spotlight 系列中，聚焦于 API Governance（API 治理）这一关键子项目，旨在为 Kubernetes 提供一套统一、灵活、可扩展的 API 管理方案。通过该方案，开发者可以更高效地管理 API 的生命周期，提升系统的可观测性、安全性和可维护性。
+本文将围绕 API Governance 的实战应用展开，深入探讨其核心概念、技术原理、实际案例、架构设计及优劣势评估，帮助读者快速上手并掌握其最佳实践。
+ ② 核心概念/技术原理 什么是 API Governance？ API Governance 是指对 API 的全生命周期进行统一管理的过程，包括但不限于：
+ API 注册与发现 版本控制 权限控制 流量控制 安全策略 日志与监控 自动化测试与部署  在 Kubernetes 中，API Governance 的目标是将这些功能集成到集群内部，形成一个统一的 API 管理平台，避免使用外部网关带来的额外复杂性。
+核心组件与架构 SIG Architecture 的 API Governance 架构主要包括以下几个核心组件：</description>
+    </item>
     <item>
       <title>是微服务架构不香还是云不香？</title>
       <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-16-tech-article/</link>

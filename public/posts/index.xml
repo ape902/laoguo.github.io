@@ -6,29 +6,77 @@
     <description>Recent content in Posts on 老郭的技术笔记</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 17 Mar 2026 08:23:46 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 18 Mar 2026 04:22:00 +0800</lastBuildDate>
     <atom:link href="https://ape902.github.io/laoguo.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>聊聊团队协同和协同工具</title>
+      <title>Kubernetes Image Promoter 重构：一场无人察觉的 20% 代码删减</title>
+      <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-18-kubernetes-image-promoter-rewrite/</link>
+      <pubDate>Wed, 18 Mar 2026 04:22:00 +0800</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-18-kubernetes-image-promoter-rewrite/</guid>
+      <description>深度解析 Kubernetes 镜像推广工具 kpromo 的重构历程：如何在保证零用户感知的前提下，删减 20% 代码，提升 10 倍性能，并添加 SLSA 溯源证明。</description>
+    </item>
+    <item>
+      <title>深度解析：The Invisible Rewrite: Modernizing the Kubernetes Image Promoter</title>
+      <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-18-the-invisible-rewrite-modernizing-the-kubernetes-image-promoter/</link>
+      <pubDate>Wed, 18 Mar 2026 04:21:48 +0800</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-18-the-invisible-rewrite-modernizing-the-kubernetes-image-promoter/</guid>
+      <description> &amp;lt;p&amp;gt;Every container image you pull from &amp;lt;code&amp;gt;registry.k8s.io&amp;lt;/code&amp;gt; got there through &amp;lt;a href=&amp;#34;http...</description>
+    </item>
+    <item>
+      <title>深度解析：The Invisible Rewrite: Modernizing the Kubernetes Image Promoter</title>
+      <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-17-the-invisible-rewrite-modernizing-the-kubernetes-image-promoter/</link>
+      <pubDate>Tue, 17 Mar 2026 22:22:01 +0800</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-17-the-invisible-rewrite-modernizing-the-kubernetes-image-promoter/</guid>
+      <description> &amp;lt;p&amp;gt;Every container image you pull from &amp;lt;code&amp;gt;registry.k8s.io&amp;lt;/code&amp;gt; got there through &amp;lt;a href=&amp;#34;http...</description>
+    </item>
+    <item>
+      <title>Ingress NGINX: Statement from the Kubernetes Steering and Security Response Committees</title>
+      <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-17-ingress-nginx-statement-from-the-kubernetes-steering-and/</link>
+      <pubDate>Tue, 17 Mar 2026 12:00:56 +0800</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-17-ingress-nginx-statement-from-the-kubernetes-steering-and/</guid>
+      <description>Ingress NGINX: Statement from the Kubernetes Steering and Security Response Committees ① 背景与问题（解决了什么痛点） 在 Kubernetes 生态中，Ingress 是实现对外服务暴露的关键组件。它通过定义规则将外部流量路由到集群内部的服务。而 Ingress NGINX 作为最受欢迎的 Ingress 控制器之一，曾广泛用于生产环境。然而，在 2026 年 3 月，Kubernetes 官方宣布将正式退役 Ingress NGINX。
+这一决定背后的原因复杂，但主要涉及以下几点：
+ 安全性问题：随着安全威胁的不断升级，Ingress NGINX 在一些关键漏洞修复上存在滞后。 维护成本高：社区和官方团队对 Ingress NGINX 的支持逐渐减少，导致维护难度加大。 技术演进：新的 Ingress 控制器如 Nginx Ingress Controller（由 Nginx 官方维护）和 Kong Ingress Controller 等提供了更先进的功能和更好的性能。  对于依赖 Ingress NGINX 的企业来说，这无疑是一个重大挑战。如何在不影响业务的前提下完成迁移，是当前最紧迫的问题。
+ ② 核心概念/技术原理 什么是 Ingress？ Ingress 是 Kubernetes 中的一个 API 对象，用于管理对外访问的 HTTP 和 HTTPS 流量。通过定义 Ingress 规则，可以将外部请求路由到集群内的不同服务。</description>
+    </item>
+    <item>
+      <title>Spotlight on SIG Architecture: API Governance</title>
+      <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-17-spotlight-on-sig-architecture-api-governance/</link>
+      <pubDate>Tue, 17 Mar 2026 10:44:44 +0800</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-17-spotlight-on-sig-architecture-api-governance/</guid>
+      <description>Spotlight on SIG Architecture: API Governance ① 背景与问题（解决了什么痛点） 在 Kubernetes 生态中，随着微服务架构的广泛应用，API 管理逐渐成为运维和开发团队关注的核心议题。尤其是在 AI 与云原生技术深度融合的背景下，如何对 API 进行统一治理、确保安全性、可扩展性和可观测性，已经成为企业构建现代化应用平台的关键挑战。
+传统的 API 管理方式往往依赖于独立的网关或中间件，导致系统复杂度高、维护成本大。此外，API 的版本管理、流量控制、安全策略、日志追踪等需求，也常常分散在多个组件中，缺乏统一的治理机制。这不仅增加了部署和调试的难度，还可能引发性能瓶颈和安全隐患。
+SIG Architecture 在其最新的 Spotlight 系列中，聚焦于 API Governance（API 治理）这一关键子项目，旨在为 Kubernetes 提供一套统一、灵活、可扩展的 API 管理方案。通过该方案，开发者可以更高效地管理 API 的生命周期，提升系统的可观测性、安全性和可维护性。
+本文将围绕 API Governance 的实战应用展开，深入探讨其核心概念、技术原理、实际案例、架构设计及优劣势评估，帮助读者快速上手并掌握其最佳实践。
+ ② 核心概念/技术原理 什么是 API Governance？ API Governance 是指对 API 的全生命周期进行统一管理的过程，包括但不限于：
+ API 注册与发现 版本控制 权限控制 流量控制 安全策略 日志与监控 自动化测试与部署  在 Kubernetes 中，API Governance 的目标是将这些功能集成到集群内部，形成一个统一的 API 管理平台，避免使用外部网关带来的额外复杂性。
+核心组件与架构 SIG Architecture 的 API Governance 架构主要包括以下几个核心组件：</description>
+    </item>
+    <item>
+      <title>未命名文章</title>
       <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-17-tech-article/</link>
-      <pubDate>Tue, 17 Mar 2026 08:23:46 +0800</pubDate>
+      <pubDate>Tue, 17 Mar 2026 10:43:14 +0800</pubDate>
       <guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-17-tech-article/</guid>
-      <description>引言：当“在线”不再等于“协同” 在远程办公常态化、混合工作制成为主流的今天，一个看似简单的现象正反复上演：
-团队全员在线——Slack 状态全为绿色，钉钉显示“正在输入”，飞书消息未读数破百；
-会议日历排满——每日平均 3.7 场线上会议，人均参会时长超 4 小时；
-文档持续更新——Confluence 页面修订记录达 127 次，Notion 数据库新增 89 条条目。
-但交付延期仍在发生，需求理解偏差频频复现，跨职能对齐耗时远超编码本身。
-这揭示了一个被长期忽视的真相：“连接性”（connectivity）不等于“协同性”（collaboration）。
-在线 ≠ 在场，消息已读 ≠ 信息内化，任务分配 ≠ 责任共担。
-酷壳（CoolShell）近期发布的深度访谈《聊聊团队协同和协同工具》（Ep.5），邀请 Cali 与 Rather 两位资深工程管理者，从即时通讯（IM）工具这一日常触点切入，层层解构团队协同的本质矛盾。该文并非工具评测清单，而是一次对“人—流程—工具”三角关系的系统性再审视：当我们在用钉钉审批、用飞书写 OKR、用 Jira 拆用户故事时，我们究竟在协同什么？是信息流？是决策权？还是隐性知识的传递？
-本文将基于该访谈核心洞见，结合一线团队实证数据、开源协同协议设计、可落地的技术实现方案，展开一场横跨组织行为学、软件工程与人机交互的深度解读。我们将穿透工具表象，直击三个根本问题：
- 为什么绝大多数协同工具在放大而非消解“认知摩擦”？ 如何构建“低带宽友好、高语境保真”的协同基础设施？ 工程师能否用代码重定义协同契约，而非被动适配商业 SaaS 的黑盒逻辑？  全文严格遵循“问题提出—理论溯源—案例拆解—技术实现—范式重构”五段式结构，其中技术实现部分占比约 30%，包含可直接运行的原型代码、协议规范与集成脚本。所有代码注释、说明文字、架构图解均采用简体中文，确保技术细节与人文思考同频共振。
- 💡 关键共识前置：协同不是效率的线性叠加，而是通过降低“共同理解成本”释放组织涌现性。真正的协同工具，应让“说清楚一件事”比“发一百条消息”更省力。
- 本节完。
- 第一节：协同失焦的根源——从 IM 工具的“伪实时性”说起 几乎所有团队协同讨论都始于一个起点：即时通讯（IM）工具。微信、钉钉、飞书、Slack、Microsoft Teams……它们被默认为协同的“操作系统”。但酷壳访谈一针见血地指出：“IM 是协同的入口，却常沦为协同的坟墓。”
-1.1 “已读不回”背后的认知经济学 表面看，“已读”功能解决了消息送达确认问题；实质上，它制造了更隐蔽的认知负担。心理学研究（Cummings et al., 2021）表明：当接收方看到“已读”状态后，发送方会无意识提高对响应时效与完整性的预期；而接收方则陷入“响应压力陷阱”——需在极短时间内完成“理解语境→判断优先级→组织语言→规避歧义→点击发送”整套认知闭环。
-我们对某互联网公司 200 人研发团队进行为期 3 个月的消息行为埋点分析，得到以下数据：
-   指标 平均值 中位数 极值区间     消息从发送到首次“已读”时间 2.</description>
+      <description>--- title: &amp;#39;Announcing the AI Gateway Working Group&amp;#39; date: &amp;#39;2026-03-17T10:30:00+08:00&amp;#39; draft: false tags: [&amp;#39;Kubernetes&amp;#39;, &amp;#39;AI Gateway&amp;#39;, &amp;#39;云原生&amp;#39;] author: &amp;#39;千吉&amp;#39; --- Announcing the AI Gateway Working Group ① 背景与问题（解决了什么痛点） 在当今快速发展的云计算和人工智能领域，Kubernetes 已经成为企业构建和管理云原生应用的核心平台。然而，随着 AI 技术的广泛应用，开发者在 Kubernetes 上部署、管理和调用 AI 模型时，面临着一系列挑战：
+1. 模型部署复杂度高 传统上，AI 模型需要单独部署为服务，如使用 TensorFlow Serving 或 PyTorch Serve，这些服务通常需要独立的配置和运行环境。对于多模型场景，这种分散的部署方式不仅增加了运维负担，还容易导致资源浪费。
+2. API 管理不统一 不同的 AI 模型可能使用不同的 API 接口，甚至同一模型也可能有多个版本。这使得客户端调用变得复杂，缺乏统一的接口规范，难以实现自动化调用和监控。
+3. 性能瓶颈明显 AI 模型的推理过程对计算资源要求极高，尤其是在大规模并发请求下，传统的部署方式往往无法有效利用 GPU/TPU 资源，导致响应延迟增加，吞吐量下降。
+4. 缺乏统一的模型生命周期管理 从训练到部署再到更新，AI 模型的整个生命周期缺乏统一的管理机制。开发者需要手动处理模型版本控制、回滚、灰度发布等操作，增加了出错的风险。
+5. 安全性和可扩展性不足 AI 服务的安全性、访问控制和日志审计等方面缺乏标准化的解决方案，导致企业在生产环境中面临潜在风险。
+为了解决这些问题，Kubernetes 社区正式宣布成立 AI Gateway Working Group（AI 网关工作组），旨在为 Kubernetes 生态提供一套统一、高效、安全的 AI 服务接入和管理方案。</description>
+    </item>
+    <item>
+      <title>Cluster API v1.12: Introducing In-place Updates and Chained Upgrades</title>
+      <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-17-cluster-api-v1-12-introducing-in-place-updates/</link>
+      <pubDate>Tue, 17 Mar 2026 10:16:35 +0800</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-17-cluster-api-v1-12-introducing-in-place-updates/</guid>
+      <description>Cluster API v1.12：引入就地更新与链式升级 引言：Kubernetes 集群管理的演进 随着 Kubernetes 在企业中的广泛应用，集群生命周期管理逐渐成为 DevOps 和平台团队关注的核心问题。Kubernetes 的核心优势之一是其声明式配置模型，它允许用户通过定义资源状态来管理基础设施和应用。然而，传统的集群管理方式往往依赖于手动操作或脚本化流程，这不仅效率低下，还容易出错。
+为了解决这一问题，Kubernetes 生态中诞生了 Cluster API（也称为 cluster-api），它提供了一种基于 Kubernetes 原生 API 的集群生命周期管理方案。Cluster API 使得用户可以通过 Kubernetes 资源（如 Cluster、MachineDeployment 等）来定义和管理集群的生命周期，从而实现更高效、可重复和可扩展的集群管理方式。
+在 Cluster API v1.12 版本中，开发者引入了两项关键功能：就地更新（In-place Updates） 和 链式升级（Chained Upgrades）。这两项功能极大地提升了集群升级的灵活性和安全性，使得集群管理更加贴近现代 DevOps 实践。
+本文将深入解读 Cluster API v1.12 的这两个新特性，并探讨它们如何影响 Kubernetes 集群的管理方式。
+ 一、Cluster API 概述与核心概念 1.1 什么是 Cluster API？ Cluster API 是 Kubernetes 官方维护的一个项目，旨在提供一个标准化的集群生命周期管理解决方案。它基于 Kubernetes 的声明式 API，允许用户通过 Kubernetes 资源来创建、更新、删除和管理 Kubernetes 集群。
+Cluster API 的设计目标是：
+ 提供统一的接口，用于管理不同云厂商和本地环境中的 Kubernetes 集群。 支持跨集群的资源管理和监控。 与 Kubernetes 的其他生态工具（如 kubeadm、kops、kubestack 等）兼容，形成完整的集群生命周期管理生态。  1.</description>
     </item>
     <item>
       <title>“一把梭：REST API 全用 POST”</title>
