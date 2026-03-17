@@ -6,13 +6,13 @@
     <description>Recent content in Tags on 老郭的技术笔记</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 17 Mar 2026 06:23:58 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 17 Mar 2026 08:23:46 +0800</lastBuildDate>
     <atom:link href="https://ape902.github.io/laoguo.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>IM设计</title>
-      <link>https://ape902.github.io/laoguo.github.io/tags/im%E8%AE%BE%E8%AE%A1/</link>
+      <title>IM</title>
+      <link>https://ape902.github.io/laoguo.github.io/tags/im/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ape902.github.io/laoguo.github.io/tags/im%E8%AE%BE%E8%AE%A1/</guid>
+      <guid>https://ape902.github.io/laoguo.github.io/tags/im/</guid>
       <description></description>
     </item>
     <item>
@@ -37,10 +37,17 @@
       <description></description>
     </item>
     <item>
-      <title>远程办公</title>
-      <link>https://ape902.github.io/laoguo.github.io/tags/%E8%BF%9C%E7%A8%8B%E5%8A%9E%E5%85%AC/</link>
+      <title>开源实践</title>
+      <link>https://ape902.github.io/laoguo.github.io/tags/%E5%BC%80%E6%BA%90%E5%AE%9E%E8%B7%B5/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ape902.github.io/laoguo.github.io/tags/%E8%BF%9C%E7%A8%8B%E5%8A%9E%E5%85%AC/</guid>
+      <guid>https://ape902.github.io/laoguo.github.io/tags/%E5%BC%80%E6%BA%90%E5%AE%9E%E8%B7%B5/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>组织设计</title>
+      <link>https://ape902.github.io/laoguo.github.io/tags/%E7%BB%84%E7%BB%87%E8%AE%BE%E8%AE%A1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/tags/%E7%BB%84%E7%BB%87%E8%AE%BE%E8%AE%A1/</guid>
       <description></description>
     </item>
     <item>
