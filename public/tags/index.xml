@@ -6,13 +6,20 @@
     <description>Recent content in Tags on 老郭的技术笔记</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 18 Mar 2026 04:22:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 18 Mar 2026 06:22:00 +0800</lastBuildDate>
     <atom:link href="https://ape902.github.io/laoguo.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>DevOps</title>
-      <link>https://ape902.github.io/laoguo.github.io/tags/devops/</link>
+      <title>AI</title>
+      <link>https://ape902.github.io/laoguo.github.io/tags/ai/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ape902.github.io/laoguo.github.io/tags/devops/</guid>
+      <guid>https://ape902.github.io/laoguo.github.io/tags/ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gateway API</title>
+      <link>https://ape902.github.io/laoguo.github.io/tags/gateway-api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/tags/gateway-api/</guid>
       <description></description>
     </item>
     <item>
@@ -23,17 +30,31 @@
       <description></description>
     </item>
     <item>
-      <title>SLSA</title>
-      <link>https://ape902.github.io/laoguo.github.io/tags/slsa/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ape902.github.io/laoguo.github.io/tags/slsa/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>云原生</title>
       <link>https://ape902.github.io/laoguo.github.io/tags/%E4%BA%91%E5%8E%9F%E7%94%9F/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://ape902.github.io/laoguo.github.io/tags/%E4%BA%91%E5%8E%9F%E7%94%9F/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>网络架构</title>
+      <link>https://ape902.github.io/laoguo.github.io/tags/%E7%BD%91%E7%BB%9C%E6%9E%B6%E6%9E%84/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/tags/%E7%BD%91%E7%BB%9C%E6%9E%B6%E6%9E%84/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DevOps</title>
+      <link>https://ape902.github.io/laoguo.github.io/tags/devops/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/tags/devops/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SLSA</title>
+      <link>https://ape902.github.io/laoguo.github.io/tags/slsa/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/tags/slsa/</guid>
       <description></description>
     </item>
     <item>
@@ -216,13 +237,6 @@
       <link>https://ape902.github.io/laoguo.github.io/tags/%E7%96%AB%E6%83%85%E5%BA%94%E5%AF%B9/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://ape902.github.io/laoguo.github.io/tags/%E7%96%AB%E6%83%85%E5%BA%94%E5%AF%B9/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>AI</title>
-      <link>https://ape902.github.io/laoguo.github.io/tags/ai/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ape902.github.io/laoguo.github.io/tags/ai/</guid>
       <description></description>
     </item>
     <item>

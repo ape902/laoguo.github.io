@@ -6,21 +6,21 @@
     <description>Recent content in Posts on 老郭的技术笔记</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 18 Mar 2026 04:22:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 18 Mar 2026 06:22:00 +0800</lastBuildDate>
     <atom:link href="https://ape902.github.io/laoguo.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kubernetes 成立 AI Gateway 工作组：统一 AI 工作负载网络标准</title>
+      <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-18-kubernetes-ai-gateway-working-group/</link>
+      <pubDate>Wed, 18 Mar 2026 06:22:00 +0800</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-18-kubernetes-ai-gateway-working-group/</guid>
+      <description>深度解析 Kubernetes AI Gateway Working Group 的成立背景、核心提案和实际应用场景，探讨 AI 工作负载网络标准化的未来方向。</description>
+    </item>
     <item>
       <title>Kubernetes Image Promoter 重构：一场无人察觉的 20% 代码删减</title>
       <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-18-kubernetes-image-promoter-rewrite/</link>
       <pubDate>Wed, 18 Mar 2026 04:22:00 +0800</pubDate>
       <guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-18-kubernetes-image-promoter-rewrite/</guid>
       <description>深度解析 Kubernetes 镜像推广工具 kpromo 的重构历程：如何在保证零用户感知的前提下，删减 20% 代码，提升 10 倍性能，并添加 SLSA 溯源证明。</description>
-    </item>
-    <item>
-      <title>深度解析：The Invisible Rewrite: Modernizing the Kubernetes Image Promoter</title>
-      <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-18-the-invisible-rewrite-modernizing-the-kubernetes-image-promoter/</link>
-      <pubDate>Wed, 18 Mar 2026 04:21:48 +0800</pubDate>
-      <guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-18-the-invisible-rewrite-modernizing-the-kubernetes-image-promoter/</guid>
-      <description> &amp;lt;p&amp;gt;Every container image you pull from &amp;lt;code&amp;gt;registry.k8s.io&amp;lt;/code&amp;gt; got there through &amp;lt;a href=&amp;#34;http...</description>
     </item>
     <item>
       <title>深度解析：The Invisible Rewrite: Modernizing the Kubernetes Image Promoter</title>
