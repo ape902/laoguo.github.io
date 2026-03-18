@@ -6,8 +6,22 @@
     <description>Recent content in Posts on 老郭的技术笔记</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 18 Mar 2026 06:22:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 18 Mar 2026 08:22:00 +0800</lastBuildDate>
     <atom:link href="https://ape902.github.io/laoguo.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ingress-NGINX 退役前必知：5 个令人惊讶的行为陷阱</title>
+      <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-18-ingress-nginx-migration-traps/</link>
+      <pubDate>Wed, 18 Mar 2026 08:22:00 +0800</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-18-ingress-nginx-migration-traps/</guid>
+      <description>Kubernetes 将于 2026 年 3 月退役 Ingress-NGINX。本文揭示 5 个隐藏的行为陷阱，帮助你在迁移到 Gateway API 时避免生产事故。</description>
+    </item>
+    <item>
+      <title>深度解析：The Invisible Rewrite: Modernizing the Kubernetes Image Promoter</title>
+      <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-18-the-invisible-rewrite-modernizing-the-kubernetes-image-promoter/</link>
+      <pubDate>Wed, 18 Mar 2026 08:00:22 +0800</pubDate>
+      <guid>https://ape902.github.io/laoguo.github.io/posts/2026-03-18-the-invisible-rewrite-modernizing-the-kubernetes-image-promoter/</guid>
+      <description> &amp;lt;p&amp;gt;Every container image you pull from &amp;lt;code&amp;gt;registry.k8s.io&amp;lt;/code&amp;gt; got there through &amp;lt;a href=&amp;#34;http...</description>
+    </item>
     <item>
       <title>Kubernetes 成立 AI Gateway 工作组：统一 AI 工作负载网络标准</title>
       <link>https://ape902.github.io/laoguo.github.io/posts/2026-03-18-kubernetes-ai-gateway-working-group/</link>
